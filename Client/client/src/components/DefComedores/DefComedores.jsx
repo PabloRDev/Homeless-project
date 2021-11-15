@@ -37,7 +37,7 @@ const DefComedores = () => {
             <h1>Teléfono: {comedor.phone}</h1>
             <h1>Horario: {comedor.opening}</h1>
             <h1>Descripción: {comedor.description}</h1>
-            <h1>Más información: {comedor.info}</h1>
+            {comedor.info && <h1>Más información: {comedor.info}</h1>}
           </li>
         ))}
       </ul>
