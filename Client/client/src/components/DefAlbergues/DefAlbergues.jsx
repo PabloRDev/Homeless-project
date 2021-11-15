@@ -36,7 +36,7 @@ const DefAlbergues = () => {
             <h1>Dirección: {albergue.address}</h1>
             <h1>Teléfono: {albergue.phone}</h1>
             <h1>Horario: {albergue.opening}</h1>
-            <h1>Servicios: {albergue.services}</h1>
+            {albergue.services && <h1>Servicios: {albergue.services}</h1>}
           </li>
         ))}
       </ul>
