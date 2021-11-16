@@ -1,7 +1,7 @@
 import React from "react";
-import "./InsertForm.css";
+import "./InsertForm.scss";
 
-function FormularioInsertar() {
+const InsertForm = () => {
   return (
     <div className="insertForm">
       <h1>¿Qué deseas añadir?</h1>
@@ -37,9 +37,14 @@ function FormularioInsertar() {
         </div>
 
         <label htmlFor="lugar">Lugar</label>
-        <input id="lugar" name="lugar" placeholder="Pon aquí la dirección" />
+        <input
+          id="lugar"
+          name="lugar"
+          placeholder="Pon aquí la dirección"
+          required
+        />
         <label htmlFor="fecha">Fecha</label>
-        <input type="date" id="Fecha" name="Fecha" />
+        <input type="date" id="Fecha" name="Fecha" required />
 
         <label htmlFor="hora">Hora</label>
         <input type="time" id="hora" name="hora" />
@@ -48,6 +53,6 @@ function FormularioInsertar() {
       </form>
     </div>
   );
-}
+};
 
-export default FormularioInsertar;
+export default InsertForm;

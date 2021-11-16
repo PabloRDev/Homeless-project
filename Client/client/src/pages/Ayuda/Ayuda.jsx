@@ -1,8 +1,6 @@
 import React from "react";
-import "./Ayuda.css";
+import "./Ayuda.scss";
 
-const Ayuda = () => {
-        
-}
+const Ayuda = () => {};
 
 export default Ayuda;
