@@ -1,0 +1,11 @@
+.MenuButtonWraper img {
+  height: 40px;
+  width: 40px;
+  margin-left: 10px;
+}
+
+@media (min-width: 1280px) {
+  .MenuButtonWraper {
+    display: none;
+  }
+}
