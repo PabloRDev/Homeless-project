@@ -1,7 +1,6 @@
 import React from "react";
 import "./InsertForm.css";
 
-
 function FormularioInsertar() {
   return (
     <div className="insertForm">
@@ -9,38 +8,36 @@ function FormularioInsertar() {
       <form>
         <label htmlFor="email">Tipo de encuentro:</label>
         <div className="radio">
-        
-          <input className="radio-concreto"
+          <input
+            className="radio-concreto"
             type="radio"
             id="comida"
             name="encuentro"
             value="Entrega de comida"
           />
-          <label for="comida">Entrega de comida</label>
+          <label htmlFor="comida">Entrega de comida</label>
 
-          <input className="radio-concreto"
+          <input
+            className="radio-concreto"
             type="radio"
             id="refugio"
             name="encuentro"
             value="Refugio cercano"
           />
-          <label for="refugio">Refugio cercano</label>
+          <label htmlFor="refugio">Refugio cercano</label>
 
-          <input className="radio-concreto"
+          <input
+            className="radio-concreto"
             type="radio"
             id="ropa"
             name="encuentro"
             value="Entrega de ropa"
           />
-          <label for="ropa">Entrega de ropa</label>
+          <label htmlFor="ropa">Entrega de ropa</label>
         </div>
 
         <label htmlFor="lugar">Lugar</label>
-        <input
-          id="lugar"
-          name="lugar"
-          placeholder="Pon aquí la dirección"
-        />
+        <input id="lugar" name="lugar" placeholder="Pon aquí la dirección" />
         <label htmlFor="fecha">Fecha</label>
         <input type="date" id="Fecha" name="Fecha" />
 
