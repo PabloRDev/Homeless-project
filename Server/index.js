@@ -10,8 +10,9 @@ const logger = require("morgan");
 const { connect } = require("./config/database");
 const HTTPSTATUSCODE = require("./utils/httpStatusCode");
 const albergue = require("./app/api/routes/albergue.routes");
-const user = require("./app/api/routes/user.routes");
 const comedor = require("./app/api/routes/comedor.routes");
+const user = require("./app/api/routes/user.routes");
+const userEvent = require("./app/api/routes/userEvent.routes");
 
 connect();
 
@@ -34,8 +35,9 @@ app.use(express.urlencoded({ extended: true }));
 app.use(logger("dev"));
 
 app.use("/albergues", albergue);
-app.use("/user", user);
 app.use("/comedores", comedor);
+app.use("/user", user);
+app.use("/userEvent", userEvent);
 
 app.use((req, res, next) => {
   let err = new Error();
