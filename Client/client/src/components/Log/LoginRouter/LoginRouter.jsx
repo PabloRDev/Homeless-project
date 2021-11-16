@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import { Route, Switch, BrowserRouter as Router } from "react-router-dom";
-import Home from "../../pages/Home/Home";
-import Login from "../../pages/Login/Login";
-import Register from "../../pages/Register/Register";
+
+import Home from "../../../pages/Home/Home";
+import Login from "../../../pages/Login/Login";
+import Register from "../../../pages/Register/Register";
 
 export const UserContext = React.createContext(null);
 
-function LoginMaster() {
+function LoginRouter() {
   const [user, setUser] = useState(null);
   const saveUser = (user) => {
     setUser(user);
@@ -14,7 +15,7 @@ function LoginMaster() {
 
   return (
     <div>
-      <h1>LOGINMASTER:</h1>
+      <h1>LOGINROUTER:</h1>
       <Router>
         <UserContext.Provider value={{ user, saveUser }}>
           <Switch>
@@ -28,4 +29,4 @@ function LoginMaster() {
   );
 }
 
-export default LoginMaster;
+export default LoginRouter;

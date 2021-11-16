@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { registerUser } from "../../api/fetch_user";
+import { registerUser } from "../../../api/fetch_user";
 
 const INITIAL_STATE = {
   email: "",

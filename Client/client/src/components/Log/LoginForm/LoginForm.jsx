@@ -1,8 +1,8 @@
 import React, { useState, useContext } from "react";
-import { loginUser } from "../../api/fetch_user";
-import { UserContext } from "../LoginMaster/LoginMaster";
+import { loginUser } from "../../../api/fetch_user";
+import { UserContext } from "../LoginRouter/LoginRouter";
 
-const LoginForm = (props) => {
+const LoginForm = () => {
   const { user, saveUser } = useContext(UserContext);
   const [error, setError] = useState("");
 
