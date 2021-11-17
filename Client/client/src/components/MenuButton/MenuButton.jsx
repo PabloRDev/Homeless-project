@@ -2,15 +2,11 @@ import React from "react";
 import "./MenuButton.scss";
 
 const MenuButton = ({ open, handleClick }) => {
-  return !open ? (
+  return (
     <div className="MenuButtonWraper" onClick={handleClick}>
-      <img src="././close_ham.png" alt="" />
+      <img src={open ? "./open_ham.png" : "./close_ham.png"} alt="" />
     </div>
-  ) : (
-    <div className="MenuButtonWraper" onClick={handleClick}>
-      <img src="./open_ham.png" alt="" />
-    </div>
-  );
+  )
 };
 
 export default MenuButton;

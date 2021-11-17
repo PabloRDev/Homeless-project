@@ -19,11 +19,26 @@ const Header = () => {
       <div className="openedHeader">
         <>
           <nav className="nav">
-            <Link to="/">
-              <button>Home</button>
-            </Link>
-            <Link to="/about">
-              <button>About</button>
+            <ul>
+              <li>
+                <Link to="/">
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link to="/About">
+                  About
+                </Link>
+              </li>
+              <li>
+                <Link to="/Ayuda">
+                  Ayuda
+                </Link>
+              </li>
+            </ul>
+            
+            <Link to="/UserGallery">
+              <button>User Gallery</button>
             </Link>
             <>
               <Link to="/ayuda">
@@ -46,10 +61,9 @@ const Header = () => {
           </nav>
           {<div>{!user ? null : <p>Hello: {user.name}</p>}</div>}
         </>
-        );
       </div>
 
-      <Navbar open={open} />
+      <Navbar open={open} handleClick={handleClick} />
       <MenuButton open={open} handleClick={handleClick} />
     </div>
   );

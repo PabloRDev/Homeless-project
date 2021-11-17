@@ -4,23 +4,24 @@ import { Link } from "react-router-dom";
 import { UserContext } from "../../App";
 import "./Navbar.scss";
 
-const Navbar = ({ open }) => {
+const Navbar = ({ open, handleClick }) => {
+
   const { user } = useContext(UserContext);
   return (
     <div className={`navbarWrapper ${open ? "opened" : "closed"}`}>
       <>
         <nav className="nav">
           <Link to="/">
-            <button>Home</button>
+            <button onClick={handleClick}>Home</button>
           </Link>
           <Link to="/about">
-            <button>About</button>
+            <button onClick={handleClick}>Situación</button>
           </Link>
           <Link to="/ayuda">
-            <button>Ayuda</button>
+            <button onClick={handleClick}>Recursos</button>
           </Link>
           <Link to="/register">
-            <button>Register</button>
+            <button onClick={handleClick}>Register</button>
           </Link>
           <Link to="/logout" onClick={() => (window.location.href = "/")}>
             <button>Logout</button>
@@ -29,10 +30,10 @@ const Navbar = ({ open }) => {
             <button>Login</button>
           </Link>
           <Link to="/userevents">
-            <button>Metido por user</button>
+            <button onClick={handleClick}>Comparte</button>
           </Link>
           <Link to="/appgallery">
-            <button>Metido por el culo</button>
+            <button onClick={handleClick}>Donde acudir</button>
           </Link>
         </nav>
         {<div>{!user ? null : <p>Hello: {user.name}</p>}</div>}
