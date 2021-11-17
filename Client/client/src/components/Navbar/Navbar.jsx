@@ -19,21 +19,29 @@ const Navbar = ({ open, handleClick }) => {
           <Link to="/ayuda" onClick={handleClick}>
             Recursos
           </Link>
-          <Link to="/register" onClick={handleClick}>
-            Register
-          </Link>
-          <Link to="/logout" onClick={() => (window.location.href = "/")}>
-            Logout
-          </Link>
-          <Link to="/login" onClick={handleClick}>
-            Login
-          </Link>
-          <Link to="/userevents" onClick={handleClick}>
-            Comparte
-          </Link>
           <Link to="/appgallery" onClick={handleClick}>
-            Donde acudir
+            Dónde acudir
           </Link>
+          {user && (
+            <Link to="/userevents" onClick={handleClick}>
+              Comparte tu evento
+            </Link>
+          )}
+          {!user && (
+            <Link to="/register" onClick={handleClick}>
+              Register
+            </Link>
+          )}
+          {user && (
+            <Link to="/logout" onClick={() => (window.location.href = "/")}>
+              Logout
+            </Link>
+          )}
+          {!user && (
+            <Link to="/login" onClick={handleClick}>
+              Login
+            </Link>
+          )}
         </nav>
         {user && <p>Hello: {user.name}</p>}
       </>

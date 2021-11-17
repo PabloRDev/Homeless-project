@@ -19,22 +19,18 @@ const Header = () => {
       <div className="openedHeader">
         <>
           <nav className="nav">
-
             <Link to="/">Home</Link>
-            <Link to="/About">About</Link>
-            <Link to="/Ayuda">Ayuda</Link>
-            <Link to="/UserGallery">User Gallery</Link>
-            <Link to="/ayuda">Ayuda</Link>
+            <Link to="/about">Situación</Link>
+            <Link to="/ayuda">Recursos</Link>
+            <Link to="/appgallery">Dónde acudir</Link>
+            {user && <Link to="/userevents">Comparte tu evento</Link>}
             {!user && <Link to="/register">Register</Link>}
+            {!user && <Link to="/login">Login</Link>}
             {user && (
-
               <Link to="/logout" onClick={() => (window.location.href = "/")}>
                 Logout
               </Link>
             )}
-            {!user && <Link to="/login">Login</Link>}
-            {user && <Link to="/userevents">Introducir evento</Link>}
-            <Link to="/appgallery">Albergues y Comedores</Link>
           </nav>
           {user && <p>Hello: {user.name}</p>}
         </>
