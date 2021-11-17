@@ -19,6 +19,7 @@ const Header = () => {
       <div className="openedHeader">
         <>
           <nav className="nav">
+
             <Link to="/">Home</Link>
             <Link to="/About">About</Link>
             <Link to="/Ayuda">Ayuda</Link>
@@ -26,6 +27,7 @@ const Header = () => {
             <Link to="/ayuda">Ayuda</Link>
             {!user && <Link to="/register">Register</Link>}
             {user && (
+
               <Link to="/logout" onClick={() => (window.location.href = "/")}>
                 Logout
               </Link>
