@@ -5,16 +5,11 @@ import { UserContext } from "../../App";
 import "./Navbar.scss";
 
 const Navbar = ({ open, handleClick }) => {
-
-
-
-
   const { user } = useContext(UserContext);
   return (
     <div className={`navbarWrapper ${open ? "opened" : "closed"}`}>
       <>
         <nav className="nav">
-
           <Link to="/" onClick={handleClick}>
             Home
           </Link>
@@ -26,7 +21,6 @@ const Navbar = ({ open, handleClick }) => {
           </Link>
           <Link to="/register" onClick={handleClick}>
             Register
-
           </Link>
           <Link to="/logout" onClick={() => (window.location.href = "/")}>
             Logout
@@ -34,13 +28,11 @@ const Navbar = ({ open, handleClick }) => {
           <Link to="/login" onClick={handleClick}>
             Login
           </Link>
-
           <Link to="/userevents" onClick={handleClick}>
             Comparte
           </Link>
           <Link to="/appgallery" onClick={handleClick}>
             Donde acudir
-
           </Link>
         </nav>
         {user && <p>Hello: {user.name}</p>}
