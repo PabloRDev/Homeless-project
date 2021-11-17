@@ -1,21 +1,42 @@
-import React from "react";
+import React, { useState } from "react";
+
 import "./App.scss";
 
-import Header from "./components/Header/Header";
-import Home from "./pages/Home/Home";
-import AppGallery from "./pages/AppGallery/AppGallery";
-import UserGallery from "./pages/UserGallery/UserGallery";
-import Ayuda from "./pages/Ayuda/Ayuda";
+import {
+  About,
+  AppGallery,
+  Ayuda,
+  Home,
+  Login,
+  Register,
+  UserGallery,
+} from "./pages";
+import Header from "./components/Header/Header.jsx";
+import { Route, Routes, BrowserRouter as Router } from "react-router-dom";
+
+export const UserContext = React.createContext(null);
 
 const App = () => {
+  const [user, setUser] = useState(null);
+  const saveUser = (user) => {
+    setUser(user);
+  };
+
   return (
-    <div className="App">
-      <Header />
-      <Home />
-      <AppGallery />
-      <UserGallery />
-      <Ayuda />
-    </div>
+    <Router>
+      <UserContext.Provider value={{ user, saveUser }}>
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/ayuda" element={<Ayuda />} />
+          <Route path="/userevents" element={<UserGallery />} />
+          <Route path="/appgallery" element={<AppGallery />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+        </Routes>
+      </UserContext.Provider>
+    </Router>
   );
 };
 
