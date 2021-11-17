@@ -26,38 +26,41 @@ const Header = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/About">
-                  About
+              <Link to="/Appgallery">
+                  Donde acudir
                 </Link>
               </li>
               <li>
-                <Link to="/Ayuda">
-                  Ayuda
+                <Link to="/Userevents">
+                  Comparte
                 </Link>
               </li>
-            </ul>
-            
-            <Link to="/UserGallery">
-              <button>User Gallery</button>
+            <li>
+            <Link to="/Ayuda">
+              Recursos
             </Link>
-            <>
-              <Link to="/ayuda">
-                <button>Ayuda</button>
+            </li>
+            <li>
+              <Link to="/About">
+                Situación
               </Link>
-            </>
-            <>
+              </li>
+            <li>
               <Link to="/register">
-                <button>Register</button>
+                Register
               </Link>
-            </>
-            <>
+              </li>
+            <li>
               <Link to="/logout" onClick={() => (window.location.href = "/")}>
-                <button>Logout</button>
+                Logout
               </Link>
+              </li>
+            <li>
               <Link to="/login">
-                <button>Login</button>
+                Login
               </Link>
-            </>
+              </li>
+              </ul>
           </nav>
           {<div>{!user ? null : <p>Hello: {user.name}</p>}</div>}
         </>

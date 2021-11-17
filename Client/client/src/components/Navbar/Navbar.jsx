@@ -5,6 +5,7 @@ import { UserContext } from "../../App";
 import "./Navbar.scss";
 
 const Navbar = ({ open, handleClick }) => {
+  <button onClick={handleClick}>Home</button>
 
   const { user } = useContext(UserContext);
   return (
@@ -12,29 +13,31 @@ const Navbar = ({ open, handleClick }) => {
       <>
         <nav className="nav">
           <Link to="/">
-            <button onClick={handleClick}>Home</button>
-          </Link>
-          <Link to="/about">
-            <button onClick={handleClick}>Situación</button>
-          </Link>
-          <Link to="/ayuda">
-            <button onClick={handleClick}>Recursos</button>
-          </Link>
-          <Link to="/register">
-            <button onClick={handleClick}>Register</button>
-          </Link>
-          <Link to="/logout" onClick={() => (window.location.href = "/")}>
-            <button>Logout</button>
-          </Link>
-          <Link to="/login">
-            <button>Login</button>
-          </Link>
-          <Link to="/userevents">
-            <button onClick={handleClick}>Comparte</button>
+            <div onClick={handleClick}>Home</div>
           </Link>
           <Link to="/appgallery">
-            <button onClick={handleClick}>Donde acudir</button>
+            <div onClick={handleClick}>Donde acudir</div>
           </Link>
+          <Link to="/userevents">
+            <div onClick={handleClick}>Comparte</div>
+          </Link>
+          <Link to="/ayuda">
+            <div onClick={handleClick}>Recursos</div>
+          </Link>
+          <Link to="/about">
+            <div onClick={handleClick}>Situación</div>
+          </Link>
+          <Link to="/register">
+            <div onClick={handleClick}>Register</div>
+          </Link>
+          <Link to="/logout" onClick={() => (window.location.href = "/")}>
+            <div>Logout</div>
+          </Link>
+          <Link to="/login">
+            <div>Login</div>
+          </Link>
+         
+          
         </nav>
         {<div>{!user ? null : <p>Hello: {user.name}</p>}</div>}
       </>
