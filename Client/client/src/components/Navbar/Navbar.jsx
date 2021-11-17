@@ -6,37 +6,44 @@ import "./Navbar.scss";
 
 const Navbar = ({ open, handleClick }) => {
 
+
+
+
   const { user } = useContext(UserContext);
   return (
     <div className={`navbarWrapper ${open ? "opened" : "closed"}`}>
       <>
         <nav className="nav">
-          <Link to="/">
-            <button onClick={handleClick}>Home</button>
+
+          <Link to="/" onClick={handleClick}>
+            Home
           </Link>
-          <Link to="/about">
-            <button onClick={handleClick}>Situación</button>
+          <Link to="/about" onClick={handleClick}>
+            Situación
           </Link>
-          <Link to="/ayuda">
-            <button onClick={handleClick}>Recursos</button>
+          <Link to="/ayuda" onClick={handleClick}>
+            Recursos
           </Link>
-          <Link to="/register">
-            <button onClick={handleClick}>Register</button>
+          <Link to="/register" onClick={handleClick}>
+            Register
+
           </Link>
           <Link to="/logout" onClick={() => (window.location.href = "/")}>
-            <button>Logout</button>
+            Logout
           </Link>
-          <Link to="/login">
-            <button>Login</button>
+          <Link to="/login" onClick={handleClick}>
+            Login
           </Link>
-          <Link to="/userevents">
-            <button onClick={handleClick}>Comparte</button>
+
+          <Link to="/userevents" onClick={handleClick}>
+            Comparte
           </Link>
-          <Link to="/appgallery">
-            <button onClick={handleClick}>Donde acudir</button>
+          <Link to="/appgallery" onClick={handleClick}>
+            Donde acudir
+
           </Link>
         </nav>
-        {<div>{!user ? null : <p>Hello: {user.name}</p>}</div>}
+        {user && <p>Hello: {user.name}</p>}
       </>
     </div>
   );
