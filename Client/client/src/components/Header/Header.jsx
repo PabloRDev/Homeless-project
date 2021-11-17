@@ -25,26 +25,34 @@ const Header = () => {
             <Link to="/about">
               <button>About</button>
             </Link>
-            <>
-              <Link to="/ayuda">
-                <button>Ayuda</button>
-              </Link>
-            </>
-            <>
+            <Link to="/ayuda">
+              <button>Ayuda</button>
+            </Link>
+            {!user && (
               <Link to="/register">
                 <button>Register</button>
               </Link>
-            </>
-            <>
+            )}
+            {user && (
               <Link to="/logout" onClick={() => (window.location.href = "/")}>
                 <button>Logout</button>
               </Link>
+            )}
+            {!user && (
               <Link to="/login">
                 <button>Login</button>
               </Link>
-            </>
+            )}
+            {user && (
+              <Link to="/userevents">
+                <button>Introducir evento</button>
+              </Link>
+            )}
+            <Link to="/appgallery">
+              <button>Albergues y Comedores</button>
+            </Link>
           </nav>
-          {<div>{!user ? null : <p>Hello: {user.name}</p>}</div>}
+          {user && <p>Hello: {user.name}</p>}
         </>
         );
       </div>

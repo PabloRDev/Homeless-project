@@ -19,23 +19,31 @@ const Navbar = ({ open }) => {
           <Link to="/ayuda">
             <button>Ayuda</button>
           </Link>
-          <Link to="/register">
-            <button>Register</button>
-          </Link>
-          <Link to="/logout" onClick={() => (window.location.href = "/")}>
-            <button>Logout</button>
-          </Link>
-          <Link to="/login">
-            <button>Login</button>
-          </Link>
-          <Link to="/userevents">
-            <button>Metido por user</button>
-          </Link>
+          {!user && (
+            <Link to="/register">
+              <button>Register</button>
+            </Link>
+          )}
+          {user && (
+            <Link to="/logout" onClick={() => (window.location.href = "/")}>
+              <button>Logout</button>
+            </Link>
+          )}
+          {!user && (
+            <Link to="/login">
+              <button>Login</button>
+            </Link>
+          )}
+          {user && (
+            <Link to="/userevents">
+              <button>Introducir evento</button>
+            </Link>
+          )}
           <Link to="/appgallery">
-            <button>Metido por el culo</button>
+            <button>Albergues y Comedores</button>
           </Link>
         </nav>
-        {<div>{!user ? null : <p>Hello: {user.name}</p>}</div>}
+        {user && <p>Hello: {user.name}</p>}
       </>
     </div>
   );
