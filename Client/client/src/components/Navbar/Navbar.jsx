@@ -23,7 +23,7 @@ const Navbar = ({ open, handleClick }) => {
             Dónde acudir
           </Link>
           {user && (
-            <Link to="/userevents" onClick={handleClick}>
+            <Link to="/userevent" onClick={handleClick}>
               Comparte tu evento
             </Link>
           )}

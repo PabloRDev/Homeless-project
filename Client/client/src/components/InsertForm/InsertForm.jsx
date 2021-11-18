@@ -1,7 +1,5 @@
 import React, { useState } from "react";
-import { registerUser } from "../../../api/fetch_user";
-
-
+import { userEvents } from "../../api/fetch_events.js";
 
 const INITIAL_STATE = {
   name: "",
@@ -11,19 +9,16 @@ const INITIAL_STATE = {
   time: "",
 };
 
-
-
 const InsertForm = () => {
-
   const [insertForm, setInsertForm] = useState(INITIAL_STATE);
   const [error, setError] = useState(null);
 
   const submitForm = async (e) => {
     e.preventDefault();
     setError("");
-  
+
     try {
-      await registerUser(insertForm);
+      await userEvents(insertForm);
       setInsertForm(INITIAL_STATE);
       setError("");
     } catch (error) {
@@ -32,71 +27,72 @@ const InsertForm = () => {
   };
   const handleInput = (e) => {
     const { name, value } = e.target;
+    console.log(value);
     setInsertForm({ ...insertForm, [name]: value });
   };
-  
-  
-  
+
   return (
     <div className="insertForm">
       <h1>¿Qué deseas añadir?</h1>
       <form onSubmit={submitForm}>
-      <label htmlFor="nombre">Nombre</label>
+        <label>Nombre</label>
         <input
-          id="nombre"
-          name="nombre"
+          name="name"
           value={insertForm.name}
           onChange={handleInput}
-          placeholder="Nombre del encuentro"
-          required
-          />
-        <label htmlFor="email">Tipo de encuentro:</label>
+          placeholder="Nombre del type"
+        />
         <div className="radio">
           <input
             className="radio-concreto"
             type="radio"
-            id="comida"
-            name="encuentro"
+            name="type"
             value="Entrega de comida"
+            onChange={handleInput}
           />
-          <label htmlFor="comida">Entrega de comida</label>
+          <label>Entrega de comida</label>
 
           <input
             className="radio-concreto"
             type="radio"
-            id="refugio"
-            name="encuentro"
+            name="type"
             value="Refugio cercano"
+            onChange={handleInput}
           />
-          <label htmlFor="refugio">Refugio cercano</label>
+          <label>Refugio cercano</label>
 
           <input
             className="radio-concreto"
             type="radio"
-            id="ropa"
-            name="encuentro"
+            name="type"
             value="Entrega de ropa"
+            onChange={handleInput}
           />
-          <label htmlFor="ropa">Entrega de ropa</label>
+          <label>Entrega de ropa</label>
         </div>
 
-        <label htmlFor="lugar">Lugar</label>
         <input
-          id="lugar"
-          name="lugar"
+          name="place"
           value={insertForm.place}
           onChange={handleInput}
           placeholder="Pon aquí la dirección"
-          required
         />
-        <label htmlFor="fecha">Fecha</label>
-        <input type="date" id="Fecha" name="Fecha"
-        value={insertForm.date}
-          onChange={handleInput} required />
+        <label htmlFor="place">Lugar</label>
+        <input
+          type="date"
+          name="date"
+          value={insertForm.date}
+          onChange={handleInput}
+        />
+        <label htmlFor="date">Fecha</label>
 
-        <label htmlFor="hora">Hora</label>
-        <input type="time" id="hora" name="hora" value={insertForm.date}
-          onChange={handleInput} />
+        <input
+          type="time"
+          name="time"
+          value={insertForm.time}
+          onChange={handleInput}
+        />
+        <label htmlFor="time">Hora</label>
 
         <button type="submit">Enviar</button>
         {error && <div style={{ color: "red" }}>{error}</div>}

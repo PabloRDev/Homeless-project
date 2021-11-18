@@ -23,7 +23,7 @@ const Header = () => {
             <Link to="/about">Situación</Link>
             <Link to="/ayuda">Recursos</Link>
             <Link to="/appgallery">Dónde acudir</Link>
-            {user && <Link to="/userevents">Comparte tu evento</Link>}
+            {user && <Link to="/userevent">Comparte tu evento</Link>}
             {!user && <Link to="/register">Register</Link>}
             {!user && <Link to="/login">Login</Link>}
             {user && (
