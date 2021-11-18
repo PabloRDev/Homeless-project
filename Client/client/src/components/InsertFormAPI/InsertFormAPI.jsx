@@ -9,7 +9,7 @@ const INITIAL_STATE = {
   time: "",
 };
 
-const InsertForm = () => {
+const InsertFormAPI = () => {
   const [insertForm, setInsertForm] = useState(INITIAL_STATE);
   const [error, setError] = useState(null);
 
@@ -101,4 +101,4 @@ const InsertForm = () => {
   );
 };
 
-export default InsertForm;
+export default InsertFormAPI;

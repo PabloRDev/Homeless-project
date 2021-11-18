@@ -1,12 +1,13 @@
 import React from "react";
-import InsertForm from "../../components/InsertForm/InsertForm";
+import InsertForm from "../../components/InsertFormAPI/InsertFormAPI";
+import InsertFormView from "../../components/InsertFormView/InsertFormView";
 
 const UserGallery = () => {
   return (
     <div>
-      <h1>ESTO ES EL UserGallery</h1>
       <div className="form">
         <InsertForm />
+        <InsertFormView />
       </div>
     </div>
   );
