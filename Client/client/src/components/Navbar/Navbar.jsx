@@ -8,43 +8,45 @@ const Navbar = ({ open, handleClick }) => {
   const { user } = useContext(UserContext);
   return (
     <div className={`navbarWrapper ${open ? "opened" : "closed"}`}>
-      <>
         <nav className="nav">
-          <Link to="/" onClick={handleClick}>
+      <ul>
+          <li><Link to="/" onClick={handleClick}>
             Home
-          </Link>
-          <Link to="/about" onClick={handleClick}>
+          </Link></li>
+          <li><Link to="/about" onClick={handleClick}>
             Situación
-          </Link>
-          <Link to="/ayuda" onClick={handleClick}>
+          </Link></li>
+          <li><Link to="/ayuda" onClick={handleClick}>
             Recursos
-          </Link>
-          <Link to="/appgallery" onClick={handleClick}>
+          </Link></li>
+          <li><Link to="/appgallery" onClick={handleClick}>
             Dónde acudir
-          </Link>
-          {user && (
+          </Link></li>
+          <li>{user && (
             <Link to="/userevents" onClick={handleClick}>
               Comparte tu evento
             </Link>
-          )}
+          )}</li>
+          <li>
           {!user && (
             <Link to="/register" onClick={handleClick}>
               Register
             </Link>
-          )}
+          )}</li>
+          <li>
           {user && (
             <Link to="/logout" onClick={() => (window.location.href = "/")}>
               Logout
             </Link>
-          )}
-          {!user && (
+          )}</li>
+          <li>{!user && (
             <Link to="/login" onClick={handleClick}>
               Login
             </Link>
-          )}
-        </nav>
+          )}</li>
         {user && <p>Hello: {user.name}</p>}
-      </>
+        </ul>
+        </nav>
     </div>
   );
 };
