@@ -19,50 +19,20 @@ const Header = () => {
       <div className="openedHeader">
         <>
           <nav className="nav">
-            <ul>
-              <li>
-                <Link to="/">
-                  Home
-                </Link>
-              </li>
-              <li>
-              <Link to="/Appgallery">
-                  Donde acudir
-                </Link>
-              </li>
-              <li>
-                <Link to="/Userevents">
-                  Comparte
-                </Link>
-              </li>
-            <li>
-            <Link to="/Ayuda">
-              Recursos
-            </Link>
-            </li>
-            <li>
-              <Link to="/About">
-                Situación
-              </Link>
-              </li>
-            <li>
-              <Link to="/register">
-                Register
-              </Link>
-              </li>
-            <li>
+            <Link to="/">Home</Link>
+            <Link to="/about">Situación</Link>
+            <Link to="/ayuda">Recursos</Link>
+            <Link to="/appgallery">Dónde acudir</Link>
+            {user && <Link to="/userevents">Comparte tu evento</Link>}
+            {!user && <Link to="/register">Register</Link>}
+            {!user && <Link to="/login">Login</Link>}
+            {user && (
               <Link to="/logout" onClick={() => (window.location.href = "/")}>
                 Logout
               </Link>
-              </li>
-            <li>
-              <Link to="/login">
-                Login
-              </Link>
-              </li>
-              </ul>
+            )}
           </nav>
-          {<div>{!user ? null : <p>Hello: {user.name}</p>}</div>}
+          {user && <p>Hello: {user.name}</p>}
         </>
       </div>
 

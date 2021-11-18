@@ -5,41 +5,45 @@ import { UserContext } from "../../App";
 import "./Navbar.scss";
 
 const Navbar = ({ open, handleClick }) => {
-  <button onClick={handleClick}>Home</button>
-
   const { user } = useContext(UserContext);
   return (
     <div className={`navbarWrapper ${open ? "opened" : "closed"}`}>
       <>
         <nav className="nav">
-          <Link to="/">
-            <div onClick={handleClick}>Home</div>
+          <Link to="/" onClick={handleClick}>
+            Home
           </Link>
-          <Link to="/appgallery">
-            <div onClick={handleClick}>Donde acudir</div>
+          <Link to="/about" onClick={handleClick}>
+            Situación
           </Link>
-          <Link to="/userevents">
-            <div onClick={handleClick}>Comparte</div>
+          <Link to="/ayuda" onClick={handleClick}>
+            Recursos
           </Link>
-          <Link to="/ayuda">
-            <div onClick={handleClick}>Recursos</div>
+          <Link to="/appgallery" onClick={handleClick}>
+            Dónde acudir
           </Link>
-          <Link to="/about">
-            <div onClick={handleClick}>Situación</div>
-          </Link>
-          <Link to="/register">
-            <div onClick={handleClick}>Register</div>
-          </Link>
-          <Link to="/logout" onClick={() => (window.location.href = "/")}>
-            <div>Logout</div>
-          </Link>
-          <Link to="/login">
-            <div>Login</div>
-          </Link>
-         
-          
+          {user && (
+            <Link to="/userevents" onClick={handleClick}>
+              Comparte tu evento
+            </Link>
+          )}
+          {!user && (
+            <Link to="/register" onClick={handleClick}>
+              Register
+            </Link>
+          )}
+          {user && (
+            <Link to="/logout" onClick={() => (window.location.href = "/")}>
+              Logout
+            </Link>
+          )}
+          {!user && (
+            <Link to="/login" onClick={handleClick}>
+              Login
+            </Link>
+          )}
         </nav>
-        {<div>{!user ? null : <p>Hello: {user.name}</p>}</div>}
+        {user && <p>Hello: {user.name}</p>}
       </>
     </div>
   );
