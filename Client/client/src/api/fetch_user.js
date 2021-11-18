@@ -1,4 +1,4 @@
-import { REGISTER_USER, LOGIN_USER, LOGOUT_USER } from "./fetch_routes";
+import { REGISTER_USER, LOGIN_USER } from "./fetch_routes";
 
 let bearer = null;
 
@@ -6,7 +6,7 @@ bearer = `bearer ${JSON.parse(localStorage.getItem("token"))}`;
 
 const headers = {
   Accept: "application/json",
-"Content-Type": "application/json",
+  "Content-Type": "application/json",
   "Access-Control-Allow-Origin": "*",
   Authorization: bearer,
 };
@@ -44,4 +44,3 @@ export const registerUser = async (form) => {
   }
   return res;
 };
-

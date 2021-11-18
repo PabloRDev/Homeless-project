@@ -16,7 +16,6 @@ import { Route, Routes, BrowserRouter as Router } from "react-router-dom";
 
 export const UserContext = React.createContext(null);
 
-
 const App = () => {
   const [user, setUser] = useState(null);
   const saveUser = (user) => {
@@ -31,7 +30,7 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/ayuda" element={<Ayuda />} />
-          <Route path="/userevents" element={<UserGallery />} />
+          <Route path="/userevent" element={<UserGallery />} />
           <Route path="/appgallery" element={<AppGallery />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
