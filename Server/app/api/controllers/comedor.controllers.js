@@ -8,6 +8,7 @@ const createComedor = async (req, res, next) => {
     newComedor.address = req.body.address;
     newComedor.phone = req.body.phone;
     newComedor.opening = req.body.opening;
+    newComedor.googleadress = req.body.googleadress;
     newComedor.description = req.body.description;
     newComedor.info = req.body.info;
 

@@ -6,6 +6,7 @@ const comedorSchema = new mongoose.Schema(
     address: { type: String, required: true },
     phone: { type: String, required: true },
     opening: { type: String, required: true },
+    googleadress: { type: String, required: true },
     description: { type: String },
     info: { type: String },
   },

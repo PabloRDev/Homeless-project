@@ -9,6 +9,7 @@ const createAlbergue = async (req, res, next) => {
     newAlbergue.phone = req.body.phone;
     newAlbergue.opening = req.body.opening;
     newAlbergue.services = req.body.services;
+    newAlbergue.googleadress = req.body.googleadress;
 
     const albergueDb = await newAlbergue.save();
     return res.json({

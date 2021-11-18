@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import "./DefComedores.scss"
 
 const DefComedores = () => {
   const ENDPOINT = "http://localhost:3000/comedores";
@@ -30,13 +31,16 @@ const DefComedores = () => {
       <ul>
         <h1>COMEDORES:</h1>
         {comedores.map((comedor) => (
-          <li key={comedor.id}>
+          <li className="li-container-comedores" key={comedor.id}>
             <h1>Nombre: {comedor.name}</h1>
-            <h1>Dirección: {comedor.address}</h1>
-            <h1>Teléfono: {comedor.phone}</h1>
-            <h1>Horario: {comedor.opening}</h1>
-            <h1>Descripción: {comedor.description}</h1>
-            {comedor.info && <h1>Más información: {comedor.info}</h1>}
+            <h2>Dirección: {comedor.address}</h2>
+            <h3>Teléfono: {comedor.phone}</h3>
+            <h3>Horario: {comedor.opening}</h3>
+
+            <iframe width="350" height="350" id="gmap_canvas" src={comedor.googleadress+"=embed"} frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>;
+
+            <h3>Descripción: {comedor.description}</h3>
+            {comedor.info && <h3>Más información: {comedor.info}</h3>}
           </li>
         ))}
       </ul>

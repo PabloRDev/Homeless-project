@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import "./DefAlbergues.scss"
 
 const DefAlbergues = () => {
   const ENDPOINT = "http://localhost:3000/albergues";
@@ -30,15 +31,24 @@ const DefAlbergues = () => {
       <ul>
         <h1>ALBERGUES:</h1>
         {albergues.map((albergue) => (
-          <li key={albergue.id}>
+          <li className="li-container-albergues" key={albergue.id}>
             <h1>Nombre: {albergue.name}</h1>
-            <h1>Dirección: {albergue.address}</h1>
-            <h1>Teléfono: {albergue.phone}</h1>
-            <h1>Horario: {albergue.opening}</h1>
+            <h2>Dirección: {albergue.address}</h2>
+            <h3>Teléfono: {albergue.phone}</h3>
+            <h3>Horario: {albergue.opening}</h3>
+
+
+            <iframe width="350" height="350" id="gmap_canvas" src={albergue.googleadress+"=embed"} frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>;
+
+
             {albergue.services && <h1>Servicios: {albergue.services}</h1>}
           </li>
+
+          
         ))}
       </ul>
+
+      
     );
   }
 };
