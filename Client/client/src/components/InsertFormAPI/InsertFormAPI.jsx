@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { userEvents } from "../../api/fetch_events.js";
+import { UserContext } from "../../App";
 
 const INITIAL_STATE = {
   name: "",
@@ -10,6 +11,7 @@ const INITIAL_STATE = {
 };
 
 const InsertFormAPI = () => {
+  const { user } = useContext(UserContext);
   const [insertForm, setInsertForm] = useState(INITIAL_STATE);
   const [error, setError] = useState(null);
 
@@ -32,72 +34,74 @@ const InsertFormAPI = () => {
   };
 
   return (
-    <div className="insertForm">
-      <h1>¿Qué deseas añadir?</h1>
-      <form onSubmit={submitForm}>
-        <label>Nombre</label>
-        <input
-          name="name"
-          value={insertForm.name}
-          onChange={handleInput}
-          placeholder="Nombre del type"
-        />
-        <div className="radio">
+    user && (
+      <div className="insertForm">
+        <h1>¿Qué deseas añadir?</h1>
+        <form onSubmit={submitForm}>
+          <label>Nombre</label>
           <input
-            className="radio-concreto"
-            type="radio"
-            name="type"
-            value="Entrega de comida"
+            name="name"
+            value={insertForm.name}
+            onChange={handleInput}
+            placeholder="Nombre del type"
+          />
+          <div className="radio">
+            <input
+              className="radio-concreto"
+              type="radio"
+              name="type"
+              value="Entrega de comida"
+              onChange={handleInput}
+            />
+            <label>Entrega de comida</label>
+
+            <input
+              className="radio-concreto"
+              type="radio"
+              name="type"
+              value="Refugio cercano"
+              onChange={handleInput}
+            />
+            <label>Refugio cercano</label>
+
+            <input
+              className="radio-concreto"
+              type="radio"
+              name="type"
+              value="Entrega de ropa"
+              onChange={handleInput}
+            />
+            <label>Entrega de ropa</label>
+          </div>
+
+          <input
+            name="place"
+            value={insertForm.place}
+            onChange={handleInput}
+            placeholder="Pon aquí la dirección"
+          />
+          <label htmlFor="place">Lugar</label>
+          <input
+            type="date"
+            name="date"
+            value={insertForm.date}
             onChange={handleInput}
           />
-          <label>Entrega de comida</label>
+          <label htmlFor="date">Fecha</label>
 
           <input
-            className="radio-concreto"
-            type="radio"
-            name="type"
-            value="Refugio cercano"
+            type="time"
+            name="time"
+            value={insertForm.time}
             onChange={handleInput}
           />
-          <label>Refugio cercano</label>
+          <label htmlFor="time">Hora</label>
 
-          <input
-            className="radio-concreto"
-            type="radio"
-            name="type"
-            value="Entrega de ropa"
-            onChange={handleInput}
-          />
-          <label>Entrega de ropa</label>
-        </div>
-
-        <input
-          name="place"
-          value={insertForm.place}
-          onChange={handleInput}
-          placeholder="Pon aquí la dirección"
-        />
-        <label htmlFor="place">Lugar</label>
-        <input
-          type="date"
-          name="date"
-          value={insertForm.date}
-          onChange={handleInput}
-        />
-        <label htmlFor="date">Fecha</label>
-
-        <input
-          type="time"
-          name="time"
-          value={insertForm.time}
-          onChange={handleInput}
-        />
-        <label htmlFor="time">Hora</label>
-
-        <button type="submit">Enviar</button>
-        {error && <div style={{ color: "red" }}>{error}</div>}
-      </form>
-    </div>
+          <button type="submit">Enviar</button>
+          {error && <div style={{ color: "red" }}>{error}</div>}
+        </form>
+      </div>
+    )
   );
 };
 
