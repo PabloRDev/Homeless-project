@@ -25,7 +25,7 @@ const Header = () => {
             <li>
               <Link to="/appgallery">Dónde acudir</Link>
             </li>
-            <li>{user && <Link to="/userevents">Comparte tu evento</Link>}</li>
+            <li>{user && <Link to="/userevent">Comparte tu evento</Link>}</li>
             <li>
               <Link to="/ayuda">Recursos</Link>
             </li>

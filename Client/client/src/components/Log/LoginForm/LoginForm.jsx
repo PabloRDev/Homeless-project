@@ -1,8 +1,10 @@
 import React, { useState, useContext } from "react";
+import { useNavigate } from "react-router-dom";
 import { loginUser } from "../../../api/fetch_user";
 import { UserContext } from "../../../App";
 
 const LoginForm = () => {
+  const navigate = useNavigate();
   const { user, saveUser } = useContext(UserContext);
   const [error, setError] = useState("");
 
@@ -20,6 +22,7 @@ const LoginForm = () => {
       const userdb = await loginUser(form);
       console.log("USERLOGINUSER", userdb.data.user);
       saveUser(userdb.data.user);
+      navigate("/");
     } catch (error) {
       console.log("Error -> Login", error);
       setError(error.message);

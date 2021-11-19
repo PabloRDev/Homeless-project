@@ -1,4 +1,6 @@
 import React, { useState, useContext } from "react";
+import { useNavigate } from "react-router-dom";
+
 import { userEvents } from "../../api/fetch_events.js";
 import { UserContext } from "../../App";
 
@@ -11,6 +13,7 @@ const INITIAL_STATE = {
 };
 
 const InsertFormAPI = () => {
+  const navigate = useNavigate();
   const { user } = useContext(UserContext);
   const [insertForm, setInsertForm] = useState(INITIAL_STATE);
   const [error, setError] = useState(null);
@@ -23,6 +26,7 @@ const InsertFormAPI = () => {
       await userEvents(insertForm);
       setInsertForm(INITIAL_STATE);
       setError("");
+      navigate("/userevent");
     } catch (error) {
       setError(error.message);
     }

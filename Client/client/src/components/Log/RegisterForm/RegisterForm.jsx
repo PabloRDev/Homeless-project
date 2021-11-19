@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { registerUser } from "../../../api/fetch_user";
 
 const INITIAL_STATE = {
@@ -8,6 +9,7 @@ const INITIAL_STATE = {
 };
 
 const RegisterForm = () => {
+  const navigate = useNavigate();
   const [registerForm, setRegisterForm] = useState(INITIAL_STATE);
   const [error, setError] = useState(null);
 
@@ -19,6 +21,7 @@ const RegisterForm = () => {
       await registerUser(registerForm);
       setRegisterForm(INITIAL_STATE);
       setError("");
+      navigate("/login");
     } catch (error) {
       setError(error.message);
     }
