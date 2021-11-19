@@ -4,7 +4,7 @@ import "./About.scss";
 const About = () => {
   return (
     <div>
-      <h1>puta guapa</h1>
+      <h1>Aquí van los graficos de Alberto</h1>
     </div>
   );
 };

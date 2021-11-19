@@ -44,10 +44,9 @@ const Header = () => {
           </ul>
         </nav>
         {user && <p>Hello: {user.name}</p>}
-
-        <Navbar open={open} handleClick={handleClick} />
-        <MenuButton open={open} handleClick={handleClick} />
       </div>
+      <Navbar open={open} handleClick={handleClick} />
+      <MenuButton open={open} handleClick={handleClick} />
     </div>
   );
 };
