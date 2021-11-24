@@ -4,6 +4,7 @@ import "./Ayuda.scss";
 const Ayuda = () => {
   return (
     <div className="enlaces">
+        <h1>CACACACACACA</h1>
         <h2>RECURSOS PARA PERSONAS SIN HOGAR</h2>
       <ul>
         <li>

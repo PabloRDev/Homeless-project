@@ -28,11 +28,11 @@ export default function SpeedDialTooltipOpen() {
   const handleClose = () => setOpen(false);
 
   return (
-    <Box sx={{ height: 900, transform: 'translateZ(0px)', flexGrow: 1 }}>
+    <Box sx={{ height: 200, transform: 'translateZ(0px)', flexGrow: 1 }}>
       <Backdrop open={open} />
       <SpeedDial
         ariaLabel="SpeedDial tooltip example"
-        sx={{ position: 'absolute', bottom: 16, right: 10 }}
+        sx={{ position: 'absolute', bottom: 10, right: 20 }}
         icon={<SpeedDialIcon />}
         onClose={handleClose}
         onOpen={handleOpen}
