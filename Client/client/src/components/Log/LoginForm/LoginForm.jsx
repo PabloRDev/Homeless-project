@@ -36,7 +36,10 @@ const LoginForm = () => {
         <input type="password" name="password" placeholder="Password" />
         <button type="submit">Login</button>
       </form>
-      <p>{!user ? "No hay usuario logueado" : user.name}</p>
+      <p>{!user && "No hay usuario logueado"}</p>
+      <p>
+        ¿Todavía no estás registrado? <a href="/register">Regístrate</a>
+      </p>
     </div>
   );
 };

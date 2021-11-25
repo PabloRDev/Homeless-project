@@ -11,7 +11,7 @@ import {
   Register,
   UserGallery,
 } from "./pages";
-import SpeedDial from "./components/SpeedDial/SpeedDial.jsx";
+import SpeedDialRight from "./components/SpeedDialRight/SpeedDialRight";
 import { Route, Routes, BrowserRouter as Router } from "react-router-dom";
 
 export const UserContext = React.createContext(null);
@@ -25,7 +25,8 @@ const App = () => {
   return (
     <Router>
       <UserContext.Provider value={{ user, saveUser }}>
-        <SpeedDial />
+        <SpeedDialRight />
+
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
