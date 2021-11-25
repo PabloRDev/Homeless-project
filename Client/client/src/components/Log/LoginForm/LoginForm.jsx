@@ -22,7 +22,7 @@ const LoginForm = () => {
       const userdb = await loginUser(form);
       console.log("USERLOGINUSER", userdb.data.user);
       saveUser(userdb.data.user);
-      navigate("/");
+      navigate("/userevent");
     } catch (error) {
       console.log("Error -> Login", error);
       setError(error.message);

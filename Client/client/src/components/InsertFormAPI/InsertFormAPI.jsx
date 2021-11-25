@@ -47,8 +47,9 @@ const InsertFormAPI = () => {
             name="name"
             value={insertForm.name}
             onChange={handleInput}
-            placeholder="Nombre del type"
+            placeholder="Nombre del evento"
           />
+          <h2>Selecciona el tipo de evento:</h2>
           <div className="radio">
             <input
               className="radio-concreto"
@@ -82,9 +83,9 @@ const InsertFormAPI = () => {
             name="place"
             value={insertForm.place}
             onChange={handleInput}
-            placeholder="Pon aquí la dirección"
+            placeholder="Dirección del evento"
           />
-          <label htmlFor="place">Lugar</label>
+          <label htmlFor="place">Dirección</label>
           <input
             type="date"
             name="date"
