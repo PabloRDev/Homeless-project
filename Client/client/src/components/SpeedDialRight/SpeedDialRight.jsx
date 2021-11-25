@@ -34,7 +34,7 @@ const actions = [
   { icon: withLink("/userevent", <EventIcon />), name: "Comparte tu evento" },
   { icon: withLink("/ayuda", <AttachFileIcon />), name: "Recursos" },
   { icon: withLink("/login", <LoginIcon />), name: "Login" },
-  { icon: withLink("/logout", <LogoutIcon />), name: "Logout" },
+  { icon: withLink("/", <LogoutIcon />), name: "Logout" },
 ];
 
 export default function PlaygroundSpeedDial() {
