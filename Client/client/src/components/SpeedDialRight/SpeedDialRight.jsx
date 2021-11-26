@@ -11,12 +11,10 @@ import PlaceIcon from "@mui/icons-material/Place";
 import EventIcon from "@mui/icons-material/Event";
 import AttachFileIcon from "@mui/icons-material/AttachFile";
 import LoginIcon from "@mui/icons-material/Login";
-import VpnKeyIcon from "@mui/icons-material/VpnKey";
 import LogoutIcon from "@mui/icons-material/Logout";
 
 // LINK TO
 import { Link } from "react-router-dom";
-import { blue } from "@mui/material/colors";
 const withLink = (to, children) => <Link to={to}>{children}</Link>;
 
 const StyledSpeedDial = styled(SpeedDial)(({ theme }) => ({
@@ -43,7 +41,7 @@ export default function PlaygroundSpeedDial() {
 
   return (
     <Box sx={{ transform: "translateZ(0px)", flexGrow: 1 }}>
-      <Box sx={{ position: "relative", mt: 3, height: 320 }}>
+      <Box sx={{ position: "relative", mt: 3, height: 100 }}>
         <StyledSpeedDial
           ariaLabel="SpeedDial"
           hidden={hidden}

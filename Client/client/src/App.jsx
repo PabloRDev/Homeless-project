@@ -14,6 +14,8 @@ import {
 } from "./pages";
 import SpeedDialRight from "./components/SpeedDialRight/SpeedDialRight.jsx";
 import { Route, Routes, BrowserRouter as Router } from "react-router-dom";
+import Navbar from "./components/Navbar/Navbar";
+import Header from "./components/Header/Header";
 
 export const UserContext = React.createContext(null);
 
@@ -26,7 +28,9 @@ const App = () => {
   return (
     <Router>
       <UserContext.Provider value={{ user, saveUser }}>
+        {/* {window.innerWidth >= 768 && <SpeedDialRight />} SpeedDial según dispositivo */}
         <SpeedDialRight />
+
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />

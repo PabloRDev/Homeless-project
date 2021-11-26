@@ -34,7 +34,7 @@ const InsertFormView = () => {
           <li className="userlist" key={userFormView.id}>
             <h1>Nombre: {userFormView.name}</h1>
             <h2>Tipo de evento: {userFormView.type}</h2>
-            <h3>Teléfono: {userFormView.place}</h3>
+            <h3>Dirección: {userFormView.place}</h3>
             <h3>Fecha: {userFormView.date}</h3>
             <h3>Hora: {userFormView.time}</h3>
           </li>
