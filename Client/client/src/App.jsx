@@ -14,8 +14,6 @@ import {
 } from "./pages";
 import SpeedDialRight from "./components/SpeedDialRight/SpeedDialRight.jsx";
 import { Route, Routes, BrowserRouter as Router } from "react-router-dom";
-import Navbar from "./components/Navbar/Navbar";
-import Header from "./components/Header/Header";
 
 export const UserContext = React.createContext(null);
 

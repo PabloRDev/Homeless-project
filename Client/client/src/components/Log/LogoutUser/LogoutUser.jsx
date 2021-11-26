@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
+import { UserContext } from "../../../App";
 
 const LogoutUser = () => {
+  const { user } = useContext(UserContext);
+
   window.location.href = "/";
-  localStorage.clear();
+  user && localStorage.clear();
 
   return <React.Fragment></React.Fragment>;
 };
