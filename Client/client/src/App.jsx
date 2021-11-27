@@ -13,6 +13,7 @@ import {
   Logout,
 } from "./pages";
 import SpeedDialRight from "./components/SpeedDialRight/SpeedDialRight.jsx";
+import SpeedDialUp from "./components/SpeedDialUp/SpeedDialUp.jsx";
 import { Route, Routes, BrowserRouter as Router } from "react-router-dom";
 
 export const UserContext = React.createContext(null);
@@ -26,8 +27,9 @@ const App = () => {
   return (
     <Router>
       <UserContext.Provider value={{ user, saveUser }}>
-        {/* {window.innerWidth >= 768 && <SpeedDialRight />} SpeedDial según dispositivo */}
-        <SpeedDialRight />
+        {window.innerWidth >= 768 && <SpeedDialRight />}
+        {window.innerWidth < 768 && <SpeedDialUp />}
+        {/* <SpeedDialRight /> */}
 
         <Routes>
           <Route path="/" element={<Home />} />
