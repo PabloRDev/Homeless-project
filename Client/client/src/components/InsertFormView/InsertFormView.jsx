@@ -33,7 +33,7 @@ const InsertFormView = () => {
         <h1 className="userplaces">Eventos insertados por los usuarios:</h1>
         {userFormViews.map((userFormView) => (
           <li className="userlist" key={userFormView.id}>
-            <h1>Nombre: {userFormView.name}</h1>
+            <h1> {userFormView.name}</h1>
             <h2>Tipo de evento: {userFormView.type}</h2>
             <h3>Dirección: {userFormView.place}</h3>
             <h3>Fecha: {userFormView.date}</h3>

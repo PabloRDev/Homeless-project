@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 import { userEvents } from "../../api/fetch_events.js";
 import { UserContext } from "../../App";
+import "../InsertFormAPI/InsertForm.scss"
 
 const INITIAL_STATE = {
   name: "",
@@ -57,7 +58,7 @@ const InsertFormAPI = () => {
               value="Entrega de comida"
               onChange={handleInput}
             />
-            <label>Entrega de comida</label>
+            <label>Entrega de comida 🍜 </label>
 
             <input
               className="radio-concreto"
@@ -66,7 +67,7 @@ const InsertFormAPI = () => {
               value="Refugio cercano"
               onChange={handleInput}
             />
-            <label>Refugio cercano</label>
+            <label>Refugio cercano 🏡 </label>
 
             <input
               className="radio-concreto"
@@ -75,7 +76,7 @@ const InsertFormAPI = () => {
               value="Entrega de ropa"
               onChange={handleInput}
             />
-            <label>Entrega de ropa</label>
+            <label>Entrega de ropa 👕 </label>
           </div>
 
           <input
