@@ -1,4 +1,5 @@
-import * as React from "react";
+import React from "react";
+//@MUI
 import { styled } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import SpeedDial from "@mui/material/SpeedDial";
@@ -12,8 +13,7 @@ import EventIcon from "@mui/icons-material/Event";
 import AttachFileIcon from "@mui/icons-material/AttachFile";
 import LoginIcon from "@mui/icons-material/Login";
 import LogoutIcon from "@mui/icons-material/Logout";
-
-// LINK TO
+// ROUTER
 import { Link } from "react-router-dom";
 const withLink = (to, children) => <Link to={to}>{children}</Link>;
 
@@ -36,8 +36,8 @@ const actions = [
 ];
 
 export default function PlaygroundSpeedDial() {
-  const [direction, setDirection] = React.useState("right");
-  const [hidden, setHidden] = React.useState(false);
+  const direction = "right";
+  const hidden = false;
 
   return (
     <Box sx={{ transform: "translateZ(0px)", flexGrow: 1 }}>

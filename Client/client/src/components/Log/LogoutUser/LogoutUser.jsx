@@ -4,8 +4,12 @@ import { UserContext } from "../../../App";
 const LogoutUser = () => {
   const { user } = useContext(UserContext);
 
-  window.location.href = "/";
-  user && localStorage.clear();
+  if (user) {
+    window.location.href = "/";
+    localStorage.clear();
+  } else {
+    window.location.href = "/login";
+  }
 
   return <React.Fragment></React.Fragment>;
 };

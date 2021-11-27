@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import "./DefAlbergues.scss"
+import "./DefAlbergues.scss";
 
 const DefAlbergues = () => {
   const ENDPOINT = "http://localhost:3000/albergues";
@@ -36,19 +36,21 @@ const DefAlbergues = () => {
             <h2>Dirección: {albergue.address}</h2>
             <h3>Teléfono: {albergue.phone}</h3>
             <h3>Horario: {albergue.opening}</h3>
-
-
-            <iframe width="350" height="350" id="gmap_canvas" src={albergue.googleadress+"=embed"} frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>;
-
-
-            {albergue.services && <h1>Servicios: {albergue.services}</h1>}
+            <iframe
+              title="Situación del albergue"
+              width="350"
+              height="350"
+              id="gmap_canvas"
+              src={albergue.googleadress + "=embed"}
+              frameborder="0"
+              scrolling="no"
+              marginheight="0"
+              marginwidth="0"
+            ></iframe>
+            ;{albergue.services && <h1>Servicios: {albergue.services}</h1>}
           </li>
-
-          
         ))}
       </ul>
-
-      
     );
   }
 };

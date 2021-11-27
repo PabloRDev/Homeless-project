@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import "./DefComedores.scss"
+import "./DefComedores.scss";
 
 const DefComedores = () => {
   const ENDPOINT = "http://localhost:3000/comedores";
@@ -36,10 +36,18 @@ const DefComedores = () => {
             <h2>Dirección: {comedor.address}</h2>
             <h3>Teléfono: {comedor.phone}</h3>
             <h3>Horario: {comedor.opening}</h3>
-
-            <iframe width="350" height="350" id="gmap_canvas" src={comedor.googleadress+"=embed"} frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>;
-
-            <h3>Descripción: {comedor.description}</h3>
+            <iframe
+              title="Mapa del lugar"
+              width="350"
+              height="350"
+              id="gmap_canvas"
+              src={comedor.googleadress + "=embed"}
+              frameborder="0"
+              scrolling="no"
+              marginheight="0"
+              marginwidth="0"
+            ></iframe>
+            ;<h3>Descripción: {comedor.description}</h3>
             {comedor.info && <h3>Más información: {comedor.info}</h3>}
           </li>
         ))}

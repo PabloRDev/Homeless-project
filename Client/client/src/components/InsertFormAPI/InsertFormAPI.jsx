@@ -40,7 +40,7 @@ const InsertFormAPI = () => {
   return (
     user && (
       <div className="insertForm">
-        <h1>¿Qué deseas añadir?</h1>
+        <h1>Introduzca su evento:</h1>
         <form onSubmit={submitForm}>
           <label>Nombre</label>
           <input

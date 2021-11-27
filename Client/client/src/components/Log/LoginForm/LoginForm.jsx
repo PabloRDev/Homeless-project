@@ -22,7 +22,7 @@ const LoginForm = () => {
       const userdb = await loginUser(form);
       console.log("USERLOGINUSER", userdb.data.user);
       saveUser(userdb.data.user);
-      navigate("/");
+      navigate("/userevent");
     } catch (error) {
       console.log("Error -> Login", error);
       setError(error.message);
@@ -36,7 +36,7 @@ const LoginForm = () => {
         <input type="password" name="password" placeholder="Password" />
         <button type="submit">Login</button>
       </form>
-      <p>{!user && "No hay usuario logueado"}</p>
+      <p>{!user && "No hay usuario"}</p>
       <p>¿Todavía no estás registrado? Lo necesitarás para agregar eventos.</p>
       <a href="/register">¡Regístrate!</a>
     </div>
