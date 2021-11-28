@@ -35,7 +35,7 @@ const actions = [
   { icon: withLink("/logout", <LogoutIcon />), name: "Logout" },
 ];
 
-export default function PlaygroundSpeedDial() {
+export default function SpeedDialDown() {
   const direction = "down";
   const hidden = false;
 

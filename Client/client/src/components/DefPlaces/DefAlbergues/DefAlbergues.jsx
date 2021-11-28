@@ -47,7 +47,7 @@ const DefAlbergues = () => {
               marginheight="0"
               marginwidth="0"
             ></iframe>
-            ;{albergue.services && <h1>Servicios: {albergue.services}</h1>}
+            {albergue.services && <h1>Servicios: {albergue.services}</h1>}
           </li>
         ))}
       </ul>

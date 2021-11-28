@@ -1,5 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
+import { UserContext } from "../../../App";
+import { registerSchema } from "../../Validations/FormValidation";
+
 import { registerUser } from "../../../api/fetch_user";
 
 const INITIAL_STATE = {
@@ -9,6 +12,7 @@ const INITIAL_STATE = {
 };
 
 const RegisterForm = () => {
+  const { user } = useContext(UserContext);
   const navigate = useNavigate();
   const [registerForm, setRegisterForm] = useState(INITIAL_STATE);
   const [error, setError] = useState(null);
@@ -17,11 +21,24 @@ const RegisterForm = () => {
     e.preventDefault();
     setError("");
 
+    let registerData = {
+      name: e.target[0].value,
+      email: e.target[1].value,
+      password: e.target[2].value,
+    };
+
+    let validRegisterData = await registerSchema.isValid(registerData);
+
     try {
       await registerUser(registerForm);
       setRegisterForm(INITIAL_STATE);
       setError("");
-      navigate("/login");
+
+      validRegisterData
+        ? navigate("/login")
+        : alert(
+            "REGISTRO INCORRECTO: introducir email válido y contraseña de 4 a 15 caracteres"
+          );
     } catch (error) {
       setError(error.message);
     }
@@ -39,7 +56,7 @@ const RegisterForm = () => {
           name="name"
           value={registerForm.name}
           onChange={handleInput}
-          placeholder="Name"
+          placeholder="Nombre"
         />
         <input
           type="text"
@@ -53,10 +70,11 @@ const RegisterForm = () => {
           name="password"
           value={registerForm.password}
           onChange={handleInput}
-          placeholder="password"
+          placeholder="Contraseña"
         />
         <button type="submit">register</button>
-        {error && <div style={{ color: "red" }}>{error}</div>}
+        <p>La contraseña debe tener de 4 a 15 caracteres</p>
+        {user && "¡Ya estás registrado!"}
       </form>
     </div>
   );

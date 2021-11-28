@@ -47,7 +47,7 @@ const DefComedores = () => {
               marginheight="0"
               marginwidth="0"
             ></iframe>
-            ;<h3>Descripción: {comedor.description}</h3>
+            <h3>Descripción: {comedor.description}</h3>
             {comedor.info && <h3>Más información: {comedor.info}</h3>}
           </li>
         ))}
