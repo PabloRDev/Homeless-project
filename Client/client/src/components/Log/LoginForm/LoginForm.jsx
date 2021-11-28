@@ -42,7 +42,7 @@ const LoginForm = () => {
           placeholder="Password"
           required
         />
-        <button type="submit">Login</button>
+        <button type="submit">Enviar</button>
         {error && (
           <div style={{ color: "red" }}>
             <p>El usuario no existe o los datos son incorrectos</p>

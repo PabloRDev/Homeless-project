@@ -72,10 +72,10 @@ const RegisterForm = () => {
           onChange={handleInput}
           placeholder="Contraseña"
         />
-        <button type="submit">register</button>
-        <p>La contraseña debe tener de 4 a 15 caracteres</p>
+        <button type="submit">Enviar</button>
         {user && "¡Ya estás registrado!"}
       </form>
+      <p>La contraseña debe tener de 4 a 15 caracteres</p>
     </div>
   );
 };

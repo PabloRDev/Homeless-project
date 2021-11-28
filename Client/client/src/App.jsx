@@ -29,7 +29,6 @@ const App = () => {
       <UserContext.Provider value={{ user, saveUser }}>
         {window.innerWidth >= 768 && <SpeedDialRight />}
         {window.innerWidth < 768 && <SpeedDialDown />}
-        {/* <SpeedDialRight /> */}
 
         <Routes>
           <Route path="/" element={<Home />} />
