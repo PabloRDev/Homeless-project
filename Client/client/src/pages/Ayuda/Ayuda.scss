@@ -1,4 +1,95 @@
-.enlaces a {
-    text-decoration:none;
-    color:white;
+.helpWrapper {
+    h1 {
+        margin-bottom: 80px;
+        text-transform: uppercase;
+    }
+    section {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        h2 {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        .imageWrapper {
+            img {
+                width: 300px;   
+            }
+
+        }
+        button {
+            width: 150px;
+            height: 40px;
+            text-align: center;
+            font-weight: 600;
+            color: #131255;
+            background-color: #FFF493;
+            filter: drop-shadow(0px 4px 7px rgba(0, 0, 0, 0.12));
+            margin-top: 20px;
+            margin-bottom: 20px;
+            a {
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+/* TODO: Eliminar */
+
+.helpWrapper {
+    button {
+        border: initial;
+        box-sizing: initial;
+        color: initial;
+        cursor: initial;
+        height: initial;
+        text-align: initial;
+        width: initial;
+        padding: initial;
+        margin: initial;
+        margin-top: initial;
+        margin-bottom: initial;
+        border-radius: initial;
+        font-size: initial;
+    }
+    img {
+        width: initial;
+        margin: initial;
+        padding: initial;
+    }
+    p {
+        margin-top: initial;
+        font-size: initial;
+    }
+}
+
+@media (min-width: 1024px) {
+    .helpWrapper {
+        max-width: 1000px;
+        margin: 0 auto;
+        section {
+            flex-direction: initial;
+            .textWrapper {
+                display: flex;
+                margin-left: 50px;
+                align-items: flex-start;
+                flex-direction: column;
+                p {
+                    text-align: left;
+                }
+            }
+        }
+        section:nth-child(odd) {
+            flex-flow: row-reverse;
+            .textWrapper {
+                margin-left: 0px;
+                margin-right: 50px;
+                p {
+                    text-align: left;
+                }
+            }
+        }
+    }
 }
