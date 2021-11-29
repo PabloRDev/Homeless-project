@@ -26,6 +26,11 @@ const LoginForm = () => {
       saveUser(userdb.data.user);
 
       navigate("/userevent");
+      !user && (
+        <div style={{ color: "red" }}>
+          <p>El usuario no existe o los datos son incorrectos</p>
+        </div>
+      );
     } catch (error) {
       console.log("Error -> Login", error);
       setError(error.message);
