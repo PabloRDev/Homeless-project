@@ -23,11 +23,13 @@ const RegisterForm = () => {
   const submitForm = async (e) => {
     e.preventDefault();
     setError("");
+    document.registerForm.reset();
 
     let registerData = {
       name: e.target[0].value,
       email: e.target[1].value,
       password: e.target[2].value,
+      passwordConfirmation: e.target[3].value,
     };
 
     let validRegisterData = await registerSchema.isValid(registerData);
@@ -54,7 +56,11 @@ const RegisterForm = () => {
   return (
     <>
       <div className="register">
-        <form onSubmit={submitForm} className="register-form">
+        <form
+          name="registerForm"
+          onSubmit={submitForm}
+          className="register-form"
+        >
           <h1 className="register-title">Registro</h1>
           <input
             className="register-form__name"
@@ -80,19 +86,19 @@ const RegisterForm = () => {
             onChange={handleInput}
             placeholder="Contraseña"
           />
+          <input
+            className="register-form__password"
+            type="password"
+            name="passwordConfirmation"
+            onChange={handleInput}
+            placeholder="Confirmar contraseña"
+          />
           <div className="register-form__btn-container">
             <h2 className="btn-title">Enviar</h2>
             <button className="register-form__btn" type="submit">
               <ArrowForwardIcon sx={{ color: "white" }} />
             </button>
           </div>
-          {error && (
-            <div className="register__error" style={{ color: "red" }}>
-              <p className="register__error-msg">
-                El usuario no existe o los datos son incorrectos
-              </p>
-            </div>
-          )}
           {user && <p className="logged">¡Ya estás registrado!</p>}
           {!user && (
             <p className="no-user">
