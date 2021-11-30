@@ -23,7 +23,6 @@ const RegisterForm = () => {
   const submitForm = async (e) => {
     e.preventDefault();
     setError("");
-    document.registerForm.reset();
 
     let registerData = {
       name: e.target[0].value,
@@ -56,11 +55,7 @@ const RegisterForm = () => {
   return (
     <>
       <div className="register">
-        <form
-          name="registerForm"
-          onSubmit={submitForm}
-          className="register-form"
-        >
+        <form onSubmit={submitForm} className="register-form">
           <h1 className="register-title">Registro</h1>
           <input
             className="register-form__name"
