@@ -1,17 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Rokkitt&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rokkitt&display=swap");
 
 body {
-  font-family: 'Roboto Slab', serif;
+  font-family: "Roboto Slab", serif;
   text-align: center;
   align-items: center;
-  background-color: #FFF;
-  color: #000;
+  background-color: white;
   margin: 0;
   padding: 20px;
   p {
-    font-family: 'Rokkitt', serif;
+    font-family: "Rokkitt", serif;
+    font-size: 1rem;
   }
 }
 
