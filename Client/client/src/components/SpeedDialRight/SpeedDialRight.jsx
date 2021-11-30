@@ -41,7 +41,7 @@ export default function PlaygroundSpeedDial() {
 
   return (
     <Box sx={{ transform: "translateZ(0px)", flexGrow: 1 }}>
-      <Box sx={{ position: "relative", mt: 3, height: 100 }}>
+      <Box sx={{ position: "relative", mt: 0, height: 0 }}>
         <StyledSpeedDial
           ariaLabel="SpeedDial"
           hidden={hidden}

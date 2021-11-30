@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 import { userEvents } from "../../api/fetch_events.js";
 import { UserContext } from "../../App";
-import "../InsertFormAPI/InsertForm.scss";
+import "../InsertFormAPI/InsertFormAPI.scss";
 
 const INITIAL_STATE = {
   name: "",

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import "./App.scss";
+import "./styles/App.scss";
 import "./styles/reset.scss";
 
 import {
