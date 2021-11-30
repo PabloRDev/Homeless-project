@@ -1,0 +1,32 @@
+.imageStatistic {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    position: relative;
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    .statisticWrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .statistic {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 20%;
+      .statisticImageWraper {
+          height: 300px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 20px;
+          img {
+              width: 100%;
+          }
+      }
+    }
+  }
+  

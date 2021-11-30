@@ -1,4 +1,5 @@
 import React from "react";
+import("./Ayuda.scss");
 
 const Ayuda = () => {
   return (
