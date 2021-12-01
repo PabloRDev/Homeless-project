@@ -20,17 +20,6 @@ const Home = () => {
         proyecto es por ustedes.
       </h2>
 
-      <div>
-        <iframe
-          width="859"
-          height="483"
-          src="https://www.youtube.com/embed/kbEhdfv_Qjo"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        ></iframe>
-      </div>
       <div className="imageStatistic">
         <h2>VIVIR SIN HOGAR NO ES SÓLO VIVIR EN LA CALLE</h2>
         <ul>
