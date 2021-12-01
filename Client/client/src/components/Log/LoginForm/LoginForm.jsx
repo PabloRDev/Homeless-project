@@ -1,7 +1,11 @@
 import React, { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
+
 import { loginUser } from "../../../api/fetch_user";
 import { UserContext } from "../../../App";
+
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import("./LoginForm.scss");
 
 const LoginForm = () => {
   const navigate = useNavigate();
@@ -26,6 +30,11 @@ const LoginForm = () => {
       saveUser(userdb.data.user);
 
       navigate("/userevent");
+      !user && (
+        <div style={{ color: "red" }}>
+          <p>El usuario no existe o los datos son incorrectos</p>
+        </div>
+      );
     } catch (error) {
       console.log("Error -> Login", error);
       setError(error.message);
@@ -33,32 +42,57 @@ const LoginForm = () => {
   };
 
   return (
-    <div>
-      <form onSubmit={submitForm}>
-        <input type="email" name="email" placeholder="E-mail" required />
-        <input
-          type="password"
-          name="password"
-          placeholder="Password"
-          required
-        />
-        <button type="submit">Enviar</button>
-        {error && (
-          <div style={{ color: "red" }}>
-            <p>El usuario no existe o los datos son incorrectos</p>
+    <>
+      <div className="login">
+        <form className="login-form" onSubmit={submitForm}>
+          <h1 className="login-title">Acceder</h1>
+          <input
+            className="login-form__email"
+            type="email"
+            name="email"
+            placeholder="E-mail"
+            required
+          />
+          <input
+            className="login-form__password"
+            type="password"
+            name="password"
+            placeholder="Password"
+            required
+          />
+          <div className="login-form__btn-container">
+            <h2 className="btn-title">Enviar</h2>
+            <button className="login-form__btn" type="submit">
+              <ArrowForwardIcon sx={{ color: "white" }} />
+            </button>
           </div>
-        )}
-      </form>
-      {!user ? "No hay usuario registrado" : "¡Ya estás registrado!"}
-      {!user && (
-        <>
-          <p>
-            ¿Todavía no estás registrado? Lo necesitarás para agregar eventos.
-          </p>
-          <a href="/register">¡Regístrate!</a>
-        </>
-      )}
-    </div>
+          {error && (
+            <div className="login__error" style={{ color: "red" }}>
+              <p className="login__error-msg">
+                El usuario no existe o los datos son incorrectos
+              </p>
+            </div>
+          )}
+          {!user ? (
+            <p className="no-user">No hay usuario registrado</p>
+          ) : (
+            <p className="logged">¡Ya estás registrado!</p>
+          )}
+          {!user && (
+            <>
+              <p className="no-user-yet">
+                ¿Todavía no estás registrado? Lo necesitarás para agregar
+                eventos.
+              </p>
+              <a className="register-link" href="/register">
+                ¡Regístrate!
+              </a>
+            </>
+          )}
+        </form>
+      </div>
+      <h2 className="login-footer">Acceso</h2>
+    </>
   );
 };
 

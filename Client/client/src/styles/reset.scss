@@ -1,0 +1,179 @@
+// =============================================================================
+// _reset.scss : Delete styles default
+// MIT License
+// =============================================================================
+
+// =============================================================================
+// _reset.scss settings
+// =============================================================================
+
+$h1_font_size: 2em !default;
+$h2_font_size: 1.5em !default;
+$h3_font_size: 1.17em !default;
+$h4_font_size: 1em !default;
+$h5_font_size: 0.83em !default;
+$h6_font_size: 0.75em !default;
+
+$h1_margin: 0.67em 0 !default;
+$h2_margin: 0.83em 0 !default;
+$h3_margin: 1em 0 !default;
+$h4_margin: 1.33em 0 !default;
+$h5_margin: 1.67em 0 !default;
+$h6_margin: 2.33em 0 !default;
+
+button[disabled],
+input[disabled] {
+  cursor: default;
+}
+
+button,
+html input[type="button"], // 1
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button; // 2
+  cursor: pointer; // 3
+  *overflow: visible; // 4
+}
+
+img {
+  border: 0; // 1
+  -ms-interpolation-mode: bicubic; // 2
+}
+
+b,
+strong {
+  font-weight: bold;
+}
+
+h1 {
+  font-size: $h1_font_size;
+  margin: $h1_margin;
+}
+
+h2 {
+  font-size: $h2_font_size;
+  margin: $h2_margin;
+}
+
+h3 {
+  font-size: $h3_font_size;
+  margin: $h3_margin;
+}
+
+h4 {
+  font-size: $h4_font_size;
+  margin: $h4_margin;
+}
+
+h5 {
+  font-size: $h5_font_size;
+  margin: $h5_margin;
+}
+
+h6 {
+  font-size: $h6_font_size;
+  margin: $h6_margin;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+div,
+span,
+object,
+iframe,
+figure,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+code,
+em,
+img,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+b,
+u,
+i,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+main,
+canvas,
+embed,
+footer,
+header,
+nav,
+section,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  text-size-adjust: none;
+}
+
+footer,
+header,
+nav,
+section,
+main {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
