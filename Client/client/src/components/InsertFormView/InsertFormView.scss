@@ -1,0 +1,56 @@
+.user-event-list {
+    
+    margin: 10px;
+    padding: 10px;
+    padding-top: 95px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    p {
+        margin: 5px;
+        padding: 5px;
+    }
+
+    a {
+        margin: 5px;
+        padding: 5px;
+    }
+
+    h1 {
+        margin: 5px;
+        padding: 5px;
+    }
+        
+
+        
+
+
+    
+
+    .user-event-list-item {
+        max-width: 90%;
+        margin: 20px;
+        padding: 25px;
+        background-color:rgb(241, 233, 233);
+        box-shadow: 3px 4px 3px 3px #0000005d;
+    border-radius: 15px;
+
+    h1 {
+        font-size: x-large;
+        margin: 5px;
+        padding: 5px;
+    }
+
+    h2 {
+        margin: 5px;
+        padding: 5px;
+    }
+
+    h3 {
+        margin: 5px;
+        padding: 5px;
+    }
+        
+    }
+}

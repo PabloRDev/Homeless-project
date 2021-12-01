@@ -28,14 +28,14 @@ const DefComedores = () => {
     return <div>Cargando...</div>;
   } else {
     return (
-      <ul>
+      <ul className="ul_comedores" >
         <h1>COMEDORES:</h1>
         {comedores.map((comedor) => (
           <li className="li-container-comedores" key={comedor.id}>
-            <h1>Nombre: {comedor.name}</h1>
-            <h2>Dirección: {comedor.address}</h2>
-            <h3>Teléfono: {comedor.phone}</h3>
-            <h3>Horario: {comedor.opening}</h3>
+            <h1 className="h1-comedores">Nombre: {comedor.name}</h1>
+            <h2 className="h2-comedores">Dirección: {comedor.address}</h2>
+            <h3 className="h3-comedores">Teléfono: {comedor.phone}</h3>
+            <h3 className="h3-comedores">Horario: {comedor.opening}</h3>
             <iframe
               title="Mapa del lugar"
               width="350"
@@ -47,8 +47,8 @@ const DefComedores = () => {
               marginheight="0"
               marginwidth="0"
             ></iframe>
-            <h3>Descripción: {comedor.description}</h3>
-            {comedor.info && <h3>Más información: {comedor.info}</h3>}
+            <h2 className="h2-comedores">Descripción: {comedor.description}</h2>
+            {comedor.info && <h2 className="h2-comedores">Más información: {comedor.info}</h2>}
           </li>
         ))}
       </ul>

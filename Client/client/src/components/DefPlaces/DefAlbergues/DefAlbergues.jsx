@@ -28,14 +28,14 @@ const DefAlbergues = () => {
     return <div>Cargando...</div>;
   } else {
     return (
-      <ul>
+      <ul className="ul_albergues">
         <h1>ALBERGUES:</h1>
         {albergues.map((albergue) => (
           <li className="li-container-albergues" key={albergue.id}>
-            <h1>Nombre: {albergue.name}</h1>
-            <h2>Dirección: {albergue.address}</h2>
-            <h3>Teléfono: {albergue.phone}</h3>
-            <h3>Horario: {albergue.opening}</h3>
+            <h1 className="h1-albergues">{albergue.name}</h1>
+            <h2 className="h2-albergues">Dirección: {albergue.address}</h2>
+            <h3 className="h3-albergues">Teléfono: {albergue.phone}</h3>
+            <h3 className="h3-albergues">Horario: {albergue.opening}</h3>
             <iframe
               title="Situación del albergue"
               width="350"
@@ -47,7 +47,7 @@ const DefAlbergues = () => {
               marginheight="0"
               marginwidth="0"
             ></iframe>
-            {albergue.services && <h1>Servicios: {albergue.services}</h1>}
+            {albergue.services && <h1 className="h1-albergues">Servicios: {albergue.services}</h1>}
           </li>
         ))}
       </ul>
