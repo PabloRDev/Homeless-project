@@ -1,0 +1,63 @@
+@media screen and (max-width: 1024px) {
+  .places-list {
+    border: 1px solid lightgrey;
+  }
+}
+
+.places-title {
+  padding-bottom: 25px;
+  padding-top: 25px;
+  margin: 0 auto;
+
+  text-decoration: underline 2px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 45px;
+  line-height: 53px;
+}
+
+.places {
+  margin-top: 50px;
+}
+
+.places-list {
+  background-color: #a7d12923;
+  margin: 10px;
+  margin-top: 30px;
+  padding: 15px;
+  border-radius: 10px;
+
+  &:hover {
+    border: 1px solid lightgrey;
+    transform: scale(1.01);
+    transition: 0.5s;
+  }
+
+  .places-name,
+  .places-subtitle {
+    margin: 15px;
+    padding: 5px;
+    font-size: 25px;
+
+    .description {
+      text-decoration: underline;
+    }
+  }
+  .places-subtitle {
+    font-size: 15px;
+  }
+
+  iframe {
+    max-width: 90%;
+    margin: 15px;
+    border-radius: 10px;
+    filter: blur(0.5px);
+
+    &:hover {
+      filter: blur(0px);
+      transform: scale(1.02);
+      transition: 0.5s;
+    }
+  }
+}

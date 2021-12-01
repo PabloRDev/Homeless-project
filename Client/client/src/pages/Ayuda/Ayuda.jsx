@@ -83,7 +83,7 @@ const Ayuda = () => {
             sufren los estados más graves de la exclusión social.
           </p>
           <button>
-            <a href="./pdf.pdf" download>
+            <a href="./Plan-de-Inclusión.pdf" download>
               Descargar PDF
             </a>
           </button>

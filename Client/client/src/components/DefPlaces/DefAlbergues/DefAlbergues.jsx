@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import "./DefAlbergues.scss";
+import "../styles/DefPlaces.scss";
 
 const DefAlbergues = () => {
   const ENDPOINT = "http://localhost:3000/albergues";
@@ -28,14 +28,30 @@ const DefAlbergues = () => {
     return <div>Cargando...</div>;
   } else {
     return (
-      <ul className="ul_albergues">
-        <h1>ALBERGUES:</h1>
+      <ul className="places">
+        <h1 className="places-title">ALBERGUES:</h1>
         {albergues.map((albergue) => (
-          <li className="li-container-albergues" key={albergue.id}>
-            <h1 className="h1-albergues">{albergue.name}</h1>
-            <h2 className="h2-albergues">Dirección: {albergue.address}</h2>
-            <h3 className="h3-albergues">Teléfono: {albergue.phone}</h3>
-            <h3 className="h3-albergues">Horario: {albergue.opening}</h3>
+          <li
+            className="places-list"
+            key={albergue.id}
+            style={{ backgroundColor: "#3c3c3a11" }}
+          >
+            <h1 className="places-name">{albergue.name}</h1>
+            <h2 className="places-subtitle">
+              <span className="description">Dirección:</span> {albergue.address}
+            </h2>
+            <h2 className="places-subtitle">
+              <span className="description">Teléfono:</span> {albergue.phone}
+            </h2>
+            <h2 className="places-subtitle">
+              <span className="description">Horario:</span> {albergue.opening}
+            </h2>
+            {albergue.services && (
+              <h2 className="places-subtitle">
+                <span className="description">Servicios:</span>{" "}
+                {albergue.services}
+              </h2>
+            )}
             <iframe
               title="Situación del albergue"
               width="350"
@@ -47,7 +63,6 @@ const DefAlbergues = () => {
               marginheight="0"
               marginwidth="0"
             ></iframe>
-            {albergue.services && <h1 className="h1-albergues">Servicios: {albergue.services}</h1>}
           </li>
         ))}
       </ul>

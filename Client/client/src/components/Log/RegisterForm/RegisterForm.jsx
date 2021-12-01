@@ -12,17 +12,18 @@ const INITIAL_STATE = {
   email: "",
   name: "",
   password: "",
+  passwordConfirmation: "",
 };
 
 const RegisterForm = () => {
   const { user } = useContext(UserContext);
   const navigate = useNavigate();
   const [registerForm, setRegisterForm] = useState(INITIAL_STATE);
-  const [error, setError] = useState(null);
+  let setError = null;
 
   const submitForm = async (e) => {
     e.preventDefault();
-    setError("");
+    setError = "";
 
     let registerData = {
       name: e.target[0].value,
@@ -36,7 +37,7 @@ const RegisterForm = () => {
     try {
       await registerUser(registerForm);
       setRegisterForm(INITIAL_STATE);
-      setError("");
+      setError = "";
 
       validRegisterData
         ? navigate("/login")
@@ -44,7 +45,7 @@ const RegisterForm = () => {
             "REGISTRO INCORRECTO: introducir email válido y contraseña de 4 a 15 caracteres"
           );
     } catch (error) {
-      setError(error.message);
+      setError = error.message;
     }
   };
   const handleInput = (e) => {
@@ -85,6 +86,7 @@ const RegisterForm = () => {
             className="register-form__password"
             type="password"
             name="passwordConfirmation"
+            value={registerForm.passwordConfirmation}
             onChange={handleInput}
             placeholder="Confirmar contraseña"
           />

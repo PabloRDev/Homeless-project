@@ -26,11 +26,14 @@ const StyledSpeedDial = styled(SpeedDial)(({ theme }) => ({
 }));
 
 const actions = [
-  { icon: withLink("/", <HomeIcon />), name: "Home" },
+  {
+    icon: withLink("/", <HomeIcon />),
+    name: "Home",
+  },
   { icon: withLink("/appgallery", <PlaceIcon />), name: "Dónde acudir" },
   { icon: withLink("/userevent", <EventIcon />), name: "Comparte tu evento" },
-  { icon: withLink("/ayuda", <AttachFileIcon />), name: "Recursos" },
   { icon: withLink("/about", <InfoIcon />), name: "Acerca del proyecto" },
+  { icon: withLink("/ayuda", <AttachFileIcon />), name: "Recursos" },
   { icon: withLink("/login", <LoginIcon />), name: "Login" },
   { icon: withLink("/logout", <LogoutIcon />), name: "Logout" },
 ];
@@ -40,7 +43,12 @@ export default function SpeedDialDown() {
   const hidden = false;
 
   return (
-    <Box sx={{ transform: "translateZ(0px)", flexGrow: 1 }}>
+    <Box
+      sx={{
+        transform: "translateZ(0px)",
+        flexGrow: 1,
+      }}
+    >
       <Box sx={{ position: "relative", mt: 0, height: 0 }}>
         <StyledSpeedDial
           ariaLabel="SpeedDial"

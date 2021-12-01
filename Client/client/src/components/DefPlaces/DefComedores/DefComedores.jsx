@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import "./DefComedores.scss";
+import "../styles/DefPlaces.scss";
 
 const DefComedores = () => {
   const ENDPOINT = "http://localhost:3000/comedores";
@@ -28,16 +28,33 @@ const DefComedores = () => {
     return <div>Cargando...</div>;
   } else {
     return (
-      <ul className="ul_comedores" >
-        <h1>COMEDORES:</h1>
+      <ul className="places">
+        <h1 className="places-title">COMEDORES:</h1>
         {comedores.map((comedor) => (
-          <li className="li-container-comedores" key={comedor.id}>
-            <h1 className="h1-comedores">Nombre: {comedor.name}</h1>
-            <h2 className="h2-comedores">Dirección: {comedor.address}</h2>
-            <h3 className="h3-comedores">Teléfono: {comedor.phone}</h3>
-            <h3 className="h3-comedores">Horario: {comedor.opening}</h3>
+          <li
+            className="places-list"
+            key={comedor.id}
+            // style={{ backgroundColor: "#8BB0D9" }}
+            style={{ backgroundColor: "#8bafd91c" }}
+          >
+            <h1 className="places-name">{comedor.name}</h1>
+            <h2 className="places-subtitle">
+              <span className="description">Dirección:</span> {comedor.address}
+            </h2>
+            <h2 className="places-subtitle">
+              <span className="description">Teléfono:</span> {comedor.phone}
+            </h2>
+            <h2 className="places-subtitle">
+              <span className="description">Horario:</span> {comedor.opening}
+            </h2>
+            {comedor.services && (
+              <h2 className="places-subtitle">
+                <span className="description">Servicios:</span>{" "}
+                {comedor.services}
+              </h2>
+            )}
             <iframe
-              title="Mapa del lugar"
+              title="Situación del comedor"
               width="350"
               height="350"
               id="gmap_canvas"
@@ -47,8 +64,6 @@ const DefComedores = () => {
               marginheight="0"
               marginwidth="0"
             ></iframe>
-            <h2 className="h2-comedores">Descripción: {comedor.description}</h2>
-            {comedor.info && <h2 className="h2-comedores">Más información: {comedor.info}</h2>}
           </li>
         ))}
       </ul>

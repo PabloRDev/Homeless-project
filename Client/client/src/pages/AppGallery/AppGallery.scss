@@ -1,10 +1,32 @@
+@media screen and (max-width: 1024px) {
+  .places-list {
+    border: 1px solid lightgrey;
+  }
+}
+
 .buttonContainer {
+  width: 100%;
   padding-top: 100px;
 
   button {
     margin: 10px;
-    padding: 10px;
     border-radius: 7px;
-    font-size: large;
+    font-size: 50px;
+    border: none;
+    width: 90px;
+    height: 90px;
+
+    &:hover {
+      border: solid 1px lightgrey !important;
+      transform: scale(1.1);
+      transition: 0.3s;
+    }
+  }
+
+  .btn-4 {
+    background-color: #3c3c3a4b;
+  }
+  .btn-5 {
+    background-color: #8bafd967;
   }
 }
