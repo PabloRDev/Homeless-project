@@ -1,3 +1,9 @@
+.subtitle {
+  font-family: 'Rokkitt', serif;
+  font-size: 20px;
+  margin: 30px;
+  line-height: 30px;
+}
 .imageStatistic {
     display: flex;
     flex-direction: column;
@@ -26,7 +32,26 @@
           img {
               width: 100%;
           }
+          h3 {
+            color: #383838;
+            font-family: "Roboto Slab", serif;
+            font-size: 17px;
+            font-style: normal;
+          }
       }
+    }
+    ul {
+      display: flex;
+      justify-content: center;
+      justify-content: space-around;
+      color: #8BB0D9;
+      font-family: "Roboto Slab", serif;
+      margin-top: 40px;
+    }
+    h2 {
+      font-family: "Roboto Slab", serif;
+      font-size: 30px;
+
     }
   }
   

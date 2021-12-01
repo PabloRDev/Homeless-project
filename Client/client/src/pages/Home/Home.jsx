@@ -10,7 +10,7 @@ const Home = () => {
           alt="homelogo"
         />
       </div>
-      <h2 className="subtitulo">
+      <h2 className="subtitle">
         El proyecto #NoMásCalle nace con la idea de ayudar a las personas sin
         hogar, con una vivienda insegura, inadecuada o en riesgo de exclusión
         social a no acabar en la calle y sufrir toda la problemática que ello
@@ -33,6 +33,12 @@ const Home = () => {
       </div>
       <div className="imageStatistic">
         <h2>VIVIR SIN HOGAR NO ES SÓLO VIVIR EN LA CALLE</h2>
+        <ul>
+          <li>· SIN TECHO</li>
+          <li>· SIN VIVIENDA</li>
+          <li>· VIVIENDA INSEGURA</li>
+          <li>· VIVIENDA INADECUADA</li>
+        </ul>
         <div className="statisticWrapper">
           <div className="statistic">
             <div className="statisticImageWraper">
