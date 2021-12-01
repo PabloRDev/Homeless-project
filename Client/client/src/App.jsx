@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import "./styles/reset.scss";
 import "./styles/App.scss";
 
-
 import {
   About,
   AppGallery,
@@ -34,12 +33,12 @@ const App = () => {
 
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
+          <Route path="/acerca" element={<About />} />
           <Route path="/ayuda" element={<Ayuda />} />
-          <Route path="/userevent" element={<UserGallery />} />
-          <Route path="/appgallery" element={<AppGallery />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
+          <Route path="/eventos" element={<UserGallery />} />
+          <Route path="/donde-acudir" element={<AppGallery />} />
+          <Route path="/acceso" element={<Login />} />
+          <Route path="/registro" element={<Register />} />
           <Route path="/logout" element={<Logout />} />
         </Routes>
       </UserContext.Provider>

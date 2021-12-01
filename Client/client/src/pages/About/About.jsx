@@ -39,7 +39,11 @@ const About = () => {
       </h2>
       <h2 className="about-subtitle">
         Esperamos que todo aquel que pase por aquí, encuentre aquello que busca
-        y pueda mejorar su calidad de vida o la de alguien más. <br />
+        y pueda mejorar su calidad de vida o la de alguien más. No dude en{" "}
+        <a href="#contacto" style={{ color: "inherit" }}>
+          contactar
+        </a>{" "}
+        con nosotros para corrección de errores o incluir más lugares. <br />
         <br /> Nuestro objetivo es claro, ayudar a que haya{" "}
         <span className="branding">#NoMásCalle</span>.
       </h2>
@@ -56,9 +60,9 @@ const About = () => {
         ></iframe>
       </div>
 
-      <div className="contact">
+      <div className="contact" id="contacto">
         <h3 className="contact-title">
-          Para contactar con los creadores del proyecto:
+          Para contactar con el equipo de desarrollo:
         </h3>
         <div className="contact-item">
           {" "}

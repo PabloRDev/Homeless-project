@@ -29,7 +29,7 @@ const LoginForm = () => {
 
       saveUser(userdb.data.user);
 
-      navigate("/userevent");
+      navigate("/eventos");
       !user && (
         <div style={{ color: "red" }}>
           <p>El usuario no existe o los datos son incorrectos</p>
@@ -76,7 +76,10 @@ const LoginForm = () => {
           {!user ? (
             <p className="no-user">No hay usuario registrado</p>
           ) : (
-            <p className="logged">¡Ya estás registrado!</p>
+            <>
+              <p className="logged">¡Ya estás registrado!</p> <br />
+              <a href="/logout">¿Salir?</a>
+            </>
           )}
           {!user && (
             <>
@@ -84,7 +87,7 @@ const LoginForm = () => {
                 ¿Todavía no estás registrado? Lo necesitarás para agregar
                 eventos.
               </p>
-              <a className="register-link" href="/register">
+              <a className="register-link" href="/registro">
                 ¡Regístrate!
               </a>
             </>

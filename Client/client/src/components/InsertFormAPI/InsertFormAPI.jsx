@@ -27,7 +27,7 @@ const InsertFormAPI = () => {
       await userEvents(insertForm);
       setInsertForm(INITIAL_STATE);
       setError("");
-      navigate("/userevent");
+      navigate("/eventos");
     } catch (error) {
       setError(error.message);
     }

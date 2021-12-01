@@ -40,7 +40,7 @@ const RegisterForm = () => {
       setError = "";
 
       validRegisterData
-        ? navigate("/login")
+        ? navigate("/acceso")
         : alert(
             "REGISTRO INCORRECTO: introducir email válido y contraseña de 4 a 15 caracteres"
           );

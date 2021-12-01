@@ -47,10 +47,14 @@ const DefComedores = () => {
             <h2 className="places-subtitle">
               <span className="description">Horario:</span> {comedor.opening}
             </h2>
-            {comedor.services && (
+            <h2 className="places-subtitle">
+              <span className="description">Descripción:</span>{" "}
+              {comedor.description}
+            </h2>
+            {comedor.info && (
               <h2 className="places-subtitle">
-                <span className="description">Servicios:</span>{" "}
-                {comedor.services}
+                <span className="description">Más información:</span>{" "}
+                {comedor.info}
               </h2>
             )}
             <iframe

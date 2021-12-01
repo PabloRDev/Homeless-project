@@ -8,7 +8,7 @@ const LogoutUser = () => {
     window.location.href = "/";
     localStorage.clear();
   } else {
-    window.location.href = "/login";
+    window.location.href = "/acceso";
   }
 
   return <React.Fragment></React.Fragment>;

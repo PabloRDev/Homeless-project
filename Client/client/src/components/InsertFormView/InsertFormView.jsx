@@ -31,7 +31,7 @@ const InsertFormView = () => {
     return (
       <ul className="user-event-list">
         <p>Para introducir eventos necesitará estar registrado.</p>
-        <a href="/login">¡Regístrate!</a>
+        <a href="/acceso">¡Regístrate!</a>
         <h1 className="userplaces">Eventos insertados por los usuarios:</h1>
         {userFormViews.map((userFormView) => (
           <li className="user-event-list-item" key={userFormView.id}>

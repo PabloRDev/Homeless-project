@@ -27,11 +27,11 @@ const StyledSpeedDial = styled(SpeedDial)(({ theme }) => ({
 
 const actions = [
   { icon: withLink("/", <HomeIcon />), name: "Home" },
-  { icon: withLink("/appgallery", <PlaceIcon />), name: "Dónde acudir" },
-  { icon: withLink("/userevent", <EventIcon />), name: "Comparte tu evento" },
+  { icon: withLink("/donde-acudir", <PlaceIcon />), name: "Dónde acudir" },
+  { icon: withLink("/eventos", <EventIcon />), name: "Comparte tu evento" },
   { icon: withLink("/ayuda", <AttachFileIcon />), name: "Recursos" },
-  { icon: withLink("/about", <InfoIcon />), name: "Acerca del proyecto" },
-  { icon: withLink("/login", <LoginIcon />), name: "Login" },
+  { icon: withLink("/acerca", <InfoIcon />), name: "Acerca del proyecto" },
+  { icon: withLink("/acceso", <LoginIcon />), name: "Acceso" },
   { icon: withLink("/logout", <LogoutIcon />), name: "Logout" },
 ];
 
