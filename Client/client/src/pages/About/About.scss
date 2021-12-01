@@ -53,6 +53,11 @@
     justify-content: center;
     width: 100%;
     margin-top: 30px;
+
+    iframe {
+      box-shadow: 3px 4px 3px 3px #0000005d;
+      border-radius: 15px;
+    }
   }
 
   .contact {

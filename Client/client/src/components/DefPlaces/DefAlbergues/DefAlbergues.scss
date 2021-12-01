@@ -1,40 +1,35 @@
 .ul_albergues {
-
-    margin-top: 50px;
+  margin-top: 50px;
 }
 
 .li-container-albergues {
+  background-color: rgb(233, 241, 236);
+  margin: 10px;
+  margin-top: 30px;
+  padding: 15px;
+  box-shadow: 3px 4px 3px 3px #0000005d;
+  border-radius: 15px;
 
-   background-color:rgb(233, 241, 236);
-    margin: 10px;
-    margin-top: 30px;
-    padding: 15px;
-    box-shadow: 3px 4px 3px 3px #0000005d;
-    border-radius: 15px
-    
-    ;
+  .h1-albergues {
+    margin: 15px;
+    padding: 5px;
+    font-size: large;
+  }
 
-    .h1-albergues {
-        margin: 15px;
-        padding: 5px;
-        font-size: large;
-    }
+  .h2-albergues {
+    margin: 5px;
+    padding: 5px;
+  }
 
-    .h2-albergues {
-        margin: 5px;
-        padding: 5px;
-    }
+  .h3-albergues {
+    margin: 5px;
+    padding: 5px;
+  }
 
-    .h3-albergues {
-        margin: 5px;
-        padding: 5px;
-    }
-    
-
-    iframe {
-        max-width: 90%;
-        margin: 15px;
-        box-shadow: 2px 2px 2px 2px #0000005d;
-        border-radius: 15px;
-    }
+  iframe {
+    max-width: 90%;
+    margin: 15px;
+    box-shadow: 2px 2px 2px 2px #0000005d;
+    border-radius: 15px;
+  }
 }
