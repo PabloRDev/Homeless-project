@@ -8,27 +8,26 @@ const Home = () => {
       <div className="homeWrapper">
         <section className="welcome">
           <h1>#NOMASCALLE</h1>
-          <h2>
-            Ideas que ayudan a personas
-          </h2>
+          <h2>Ideas que ayudan a personas</h2>
           <div className="image-cropper">
             <img
               className="image-circle"
               src="https://images.unsplash.com/photo-1518398046578-8cca57782e17?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
               alt="homelogo"
             />
-          </div> <Link to="/AppGallery">
-    <button>¿Dondé quiero ir?</button>
+          </div>{" "}
+          <Link to="/donde-acudir">
+            <button style={{ cursor: "pointer" }}>¿Dondé puedo acudir?</button>
           </Link>
           <h2 className="subtitle">
-          El proyecto #NoMásCalle nace con la idea de ayudar a las personas sin
-          hogar, con una vivienda insegura, inadecuada o en riesgo de exclusión
-          social a no acabar en la calle y sufrir toda la problemática que ello
-          conlleva, acercándoles todas las medidas y eventos que Madrid, sus
-          insituciones y ciudadanos ponen a su disposición. Se calcula que
-          diariamente duermen en las calles de Madrid un millar de personas,
-          este proyecto es por ustedes.
-        </h2>
+            El proyecto #NoMásCalle nace con la idea de ayudar a las personas
+            sin hogar, con una vivienda insegura, inadecuada o en riesgo de
+            exclusión social a no acabar en la calle y sufrir toda la
+            problemática que ello conlleva, acercándoles todas las medidas y
+            eventos que Madrid, sus insituciones y ciudadanos ponen a su
+            disposición. Se calcula que diariamente duermen en las calles de
+            Madrid un millar de personas, este proyecto es por ustedes.
+          </h2>
         </section>
         <div className="imageStatistic">
           <h2>VIVIR SIN HOGAR NO ES SÓLO VIVIR EN LA CALLE</h2>
