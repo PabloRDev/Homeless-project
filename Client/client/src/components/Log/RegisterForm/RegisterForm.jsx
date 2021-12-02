@@ -36,7 +36,7 @@ const RegisterForm = () => {
 
     try {
       await registerUser(registerForm);
-      setRegisterForm(INITIAL_STATE);
+      // setRegisterForm(INITIAL_STATE);
       setError = "";
 
       validRegisterData

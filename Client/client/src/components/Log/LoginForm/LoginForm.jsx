@@ -36,8 +36,8 @@ const LoginForm = () => {
         </div>
       );
     } catch (error) {
-      console.log("Error -> Login", error);
       setError(error.message);
+      console.log("Error -> Login", error);
     }
   };
 
