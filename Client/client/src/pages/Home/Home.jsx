@@ -7,16 +7,10 @@ const Home = () => {
     <div>
       <div className="homeWrapper">
         <section className="welcome">
-          <img
-          className="image-logo"
-           src="./logonegro.png" alt="Imagen Logo" />
+          <img className="image-logo" src="./logonegro.png" alt="Imagen Logo" />
           <h2>Ideas que ayudan a personas</h2>
           <div className="image-cropper">
-            <img
-              className="image-circle"
-              src="https://images.unsplash.com/photo-1518398046578-8cca57782e17?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
-              alt="homelogo"
-            />
+            <img className="image-circle" src="./Home.jpg" alt="homelogo" />
           </div>{" "}
           <Link to="/donde-acudir">
             <button style={{ cursor: "pointer" }}>¿Dondé puedo acudir?</button>
