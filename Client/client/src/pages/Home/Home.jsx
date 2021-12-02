@@ -7,15 +7,7 @@ const Home = () => {
     <div>
       <div className="homeWrapper">
         <section className="welcome">
-<<<<<<< HEAD
-          <img
-          className="image-logo"
-           src="./logonegro.png" alt="" />
-=======
-          <h1 className="about-title">
-            <span className="branding-title">#</span>NoMásCalle
-          </h1>
->>>>>>> 25d26ab85309f35afd6fae9b37755fb09a5e3659
+          <img className="image-logo" src="./logonegro.png" alt="" />
           <h2>Ideas que ayudan a personas</h2>
           <div className="image-cropper">
             <img
