@@ -4,9 +4,9 @@ import "./About.scss";
 const About = () => {
   return (
     <div className="about">
-      <h1 className="about-title">
-        <span className="branding-title">#</span>NoMásCalle
-      </h1>
+      <img
+          className="image-logo"
+           src="./logonegro.png" alt="Imagen Logo" />
       <h2 className="about-subtitle about-subtitle--1">
         El proyecto <span className="branding">#NoMásCalle</span> nace con la
         idea de ayudar a las personas sin hogar, con una vivienda insegura,
@@ -50,8 +50,8 @@ const About = () => {
 
       <div className="video">
         <iframe
-          width="1459"
-          height="483"
+          width="850"
+          height="480"
           src="https://www.youtube.com/embed/kbEhdfv_Qjo"
           title="YouTube video player"
           frameborder="0"

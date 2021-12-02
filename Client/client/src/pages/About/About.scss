@@ -1,9 +1,14 @@
+.image-logo {
+  width: 100%;
+  max-width: 50%;
+}
+
 .branding {
-  color: #1664c0;
+  color: #8bb0d9;
   font-weight: 800;
 }
 .branding-title {
-  color: #1664c0;
+  color: #8bb0d9;
   font-weight: 800;
   font-size: 1.2em;
 }
@@ -39,7 +44,7 @@
     padding: 15px;
 
     text-align: justify;
-    font-family: Roboto !important;
+    font-family: "Rokkitt", serif !important;
     font-style: normal !important;
     font-weight: normal !important;
     font-size: 20px !important;
@@ -57,20 +62,23 @@
 
     iframe {
       border-radius: 15px;
+      margin: 15px;
     }
   }
 
   .contact {
     width: 100%;
-    padding-top: 60px;
+    padding-top: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     font-size: 14px;
+    margin-bottom: 30px;
 
     .contact-title {
       font-size: 18px;
+      padding: 15px;
     }
     .contact-item,
     .contact-title {

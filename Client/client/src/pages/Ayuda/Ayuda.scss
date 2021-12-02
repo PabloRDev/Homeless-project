@@ -14,15 +14,12 @@
     margin-bottom: 40px;
     p,
     h2 {
-      padding: 0 15px 20px 15px;
       font-size: 18px;
       text-align: justify;
     }
     h2 {
       padding-bottom: 15px;
       padding-top: 15px;
-
-      text-decoration: underline 2px;
       font-family: Roboto;
       font-style: normal;
       font-weight: 600;
@@ -32,18 +29,21 @@
     .imageWrapper {
       img {
         width: 300px;
-        height: 250px;
         border-radius: 5px;
       }
     }
     button {
-      margin: 10px;
-      border-radius: 7px;
-      font-size: 1.7rem;
-      border: none;
+      padding: 5px;
       width: 150px;
-      height: 100px;
-      background-color: #8bafd967;
+      height: 40px;
+      text-align: center;
+      font-weight: 500;
+      color: #3d3d3a;
+      background-color: #8bb0d9;
+      border-radius: 5px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      border: 0;
 
       &:hover {
         border: solid 1px lightgrey !important;
@@ -51,8 +51,8 @@
         transition: 0.3s;
       }
       a {
-        color: #0210d8;
         text-decoration: none;
+        color: #3d3d3a;
       }
     }
   }
