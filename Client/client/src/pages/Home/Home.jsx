@@ -7,7 +7,9 @@ const Home = () => {
     <div>
       <div className="homeWrapper">
         <section className="welcome">
-          <h1>#NOMASCALLE</h1>
+          <img
+          className="image-logo"
+           src="./logonegro.png" alt="" />
           <h2>Ideas que ayudan a personas</h2>
           <div className="image-cropper">
             <img

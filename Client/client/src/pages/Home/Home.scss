@@ -1,15 +1,9 @@
 .homeWrapper {
-  padding: 20px;
+  padding: 80px;
   .welcome {
     display: flex;
     flex-direction: column;
     align-items: center;
-    h1 {
-      font-family: "Roboto Slab", serif;
-      font-size: 30px;
-      margin-bottom: 20px;
-      margin-top: 70px;
-    }
     h2 {
       margin-bottom: 20px;
     }
@@ -20,9 +14,12 @@
       overflow: hidden;
       border-radius: 50%;
     }
+    .image-logo {
+      width: 280px;
+      margin-bottom: 20px;
+    }
     img {
       display: inline;
-      margin: 0 auto;
       height: 100%;
       width: 100%;
     }
@@ -34,7 +31,7 @@
       height: initial;
       text-align: initial;
       width: initial;
-      padding: initial;
+      padding: 5px;
       margin: initial;
       margin-top: initial;
       margin-bottom: initial;
@@ -44,7 +41,7 @@
       height: 40px;
       text-align: center;
       font-weight: 500;
-      color: white;
+      color: #3d3d3a;
       background-color: #8bb0d9;
       border-radius: 5px;
       filter: drop-shadow(0px 4px 7px rgba(0, 0, 0, 0.12));
@@ -127,7 +124,7 @@
     padding: 20px;
     .welcome {
       align-items: flex-start;
-      margin-top: 50px;
+      margin-top: 70px;
       min-height: 30vw;
       position: relative;
       padding-left: 100px;
@@ -196,6 +193,9 @@
       button {
         right: 0;
         bottom: 0;
+      }
+      .image-logo {
+        width: 30vw;
       }
       .image-cropper {
         width: 40vw;
