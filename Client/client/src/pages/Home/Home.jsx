@@ -22,13 +22,14 @@ const Home = () => {
             <button style={{ cursor: "pointer" }}>¿Dondé puedo acudir?</button>
           </Link>
           <h2 className="subtitle">
-            El proyecto #NoMásCalle nace con la idea de ayudar a las personas
-            sin hogar, con una vivienda insegura, inadecuada o en riesgo de
-            exclusión social a no acabar en la calle y sufrir toda la
-            problemática que ello conlleva, acercándoles todas las medidas y
-            eventos que Madrid, sus insituciones y ciudadanos ponen a su
-            disposición. Se calcula que diariamente duermen en las calles de
-            Madrid un millar de personas, este proyecto es por ustedes.
+            El proyecto <span className="branding">#NoMásCalle</span> nace con
+            la idea de ayudar a las personas sin hogar, con una vivienda
+            insegura, inadecuada o en riesgo de exclusión social a no acabar en
+            la calle y sufrir toda la problemática que ello conlleva,
+            acercándoles todas las medidas y eventos que Madrid, sus
+            insituciones y ciudadanos ponen a su disposición. Se calcula que
+            diariamente duermen en las calles de Madrid un millar de personas,
+            este proyecto es por ustedes.
           </h2>
         </section>
         <div className="imageStatistic">
