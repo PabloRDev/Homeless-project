@@ -7,7 +7,9 @@ const Home = () => {
     <div>
       <div className="homeWrapper">
         <section className="welcome">
-          <h1>#NOMASCALLE</h1>
+          <h1 className="about-title">
+            <span className="branding-title">#</span>NoMásCalle
+          </h1>
           <h2>Ideas que ayudan a personas</h2>
           <div className="image-cropper">
             <img
