@@ -7,9 +7,15 @@ const Home = () => {
     <div>
       <div className="homeWrapper">
         <section className="welcome">
+<<<<<<< HEAD
           <img
           className="image-logo"
            src="./logonegro.png" alt="" />
+=======
+          <h1 className="about-title">
+            <span className="branding-title">#</span>NoMásCalle
+          </h1>
+>>>>>>> 25d26ab85309f35afd6fae9b37755fb09a5e3659
           <h2>Ideas que ayudan a personas</h2>
           <div className="image-cropper">
             <img
@@ -22,13 +28,14 @@ const Home = () => {
             <button style={{ cursor: "pointer" }}>¿Dondé puedo acudir?</button>
           </Link>
           <h2 className="subtitle">
-            El proyecto #NoMásCalle nace con la idea de ayudar a las personas
-            sin hogar, con una vivienda insegura, inadecuada o en riesgo de
-            exclusión social a no acabar en la calle y sufrir toda la
-            problemática que ello conlleva, acercándoles todas las medidas y
-            eventos que Madrid, sus insituciones y ciudadanos ponen a su
-            disposición. Se calcula que diariamente duermen en las calles de
-            Madrid un millar de personas, este proyecto es por ustedes.
+            El proyecto <span className="branding">#NoMásCalle</span> nace con
+            la idea de ayudar a las personas sin hogar, con una vivienda
+            insegura, inadecuada o en riesgo de exclusión social a no acabar en
+            la calle y sufrir toda la problemática que ello conlleva,
+            acercándoles todas las medidas y eventos que Madrid, sus
+            insituciones y ciudadanos ponen a su disposición. Se calcula que
+            diariamente duermen en las calles de Madrid un millar de personas,
+            este proyecto es por ustedes.
           </h2>
         </section>
         <div className="imageStatistic">
