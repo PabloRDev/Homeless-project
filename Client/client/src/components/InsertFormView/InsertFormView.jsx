@@ -29,17 +29,38 @@ const InsertFormView = () => {
     return <div>Cargando...</div>;
   } else {
     return (
-      <ul className="user-event-list">
+      <ul className="places" style={{ paddingTop: "100px" }}>
         <p>Para introducir eventos necesitará estar registrado.</p>
-        <a href="/acceso">¡Regístrate!</a>
-        <h1 className="userplaces">Eventos insertados por los usuarios:</h1>
+        <a href="/acceso">¡Regístrate o accede!</a>
+        <h1 className="places-title" style={{ marginTop: "50px" }}>
+          Eventos insertados por los usuarios:
+        </h1>
         {userFormViews.map((userFormView) => (
-          <li className="user-event-list-item" key={userFormView.id}>
-            <h1> {userFormView.name}</h1>
-            <h2>Tipo de evento: {userFormView.type}</h2>
-            <h3>Dirección: {userFormView.place}</h3>
-            <h3>Fecha: {userFormView.date}</h3>
-            <h3>Hora: {userFormView.time}</h3>
+          <li
+            className="places-list"
+            style={{ backgroundColor: "#8bafd91c" }}
+            key={userFormView.id}
+          >
+            <h2 className="places-subtitle">
+              <span className="description">Nombre:</span> {userFormView.name}
+            </h2>
+            <h2 className="places-subtitle">
+              <span className="description">Tipo de evento:</span>{" "}
+              {userFormView.type}
+            </h2>
+            <h2 className="places-subtitle">
+              {" "}
+              <span className="description">Dirección:</span>{" "}
+              {userFormView.place}
+            </h2>
+            <h2 className="places-subtitle">
+              {" "}
+              <span className="description">Fecha:</span> {userFormView.date}
+            </h2>
+            <h2 className="places-subtitle">
+              {" "}
+              <span className="description">Hora:</span> {userFormView.time}
+            </h2>
           </li>
         ))}
       </ul>
