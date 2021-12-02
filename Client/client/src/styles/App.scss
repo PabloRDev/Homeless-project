@@ -5,7 +5,8 @@ body {
   font-family: "Roboto Slab", serif;
   text-align: center;
   align-items: center;
-  background-color: whitesmoke;
+  // background-color: whitesmoke;
+  background-image: url(https://images.unsplash.com/photo-1604147706283-d7119b5b822c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8d2hpdGUlMjB0ZXh0dXJlfGVufDB8fDB8fA%3D%3D&w=1000&q=80);
   margin: 0;
   padding: 0;
   p {
@@ -22,9 +23,11 @@ body {
 
 .css-1i5alow-MuiButtonBase-root-MuiFab-root-MuiSpeedDial-fab {
   background-color: #69696956 !important;
+  background-size: cover;
   // #8BB0D9
 }
 
 .css-i4bv87-MuiSvgIcon-root {
-  fill: #0364d4 !important;
+  // fill: #0364d4 !important;
+  fill: black !important;
 }

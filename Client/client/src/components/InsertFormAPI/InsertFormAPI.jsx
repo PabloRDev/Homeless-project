@@ -45,62 +45,83 @@ const InsertFormAPI = () => {
         <form onSubmit={submitForm}>
           <label>Nombre</label>
           <input
+            className="inputButton"
             name="name"
             value={insertForm.name}
             onChange={handleInput}
-            placeholder="Nombre del type"
+            placeholder="Nombre del evento"
           />
           <div className="radio">
-            <input
-              className="radio-concreto"
-              type="radio"
-              name="type"
-              value="Entrega de comida"
-              onChange={handleInput}
-            />
-            <label>Entrega de comida 🍜 </label>
+            <div className="radio-concreto">
+              <input
+                type="radio"
+                name="type"
+                value="Entrega de comida"
+                onChange={handleInput}
+              />
 
-            <input
-              className="radio-concreto"
-              type="radio"
-              name="type"
-              value="Refugio cercano"
-              onChange={handleInput}
-            />
-            <label>Refugio cercano 🏡 </label>
+              <label>
+                Entrega de comida{" "}
+                <img src="./plato.png" alt="Entrega de comida" />
+              </label>
+            </div>
+            <div className="radio-concreto">
+              <input
+                type="radio"
+                name="type"
+                value="Refugio cercano"
+                onChange={handleInput}
+              />
 
-            <input
-              className="radio-concreto"
-              type="radio"
-              name="type"
-              value="Entrega de ropa"
-              onChange={handleInput}
-            />
-            <label>Entrega de ropa 👕 </label>
+              <label>
+                Refugio cercano <img src="./casa_1.png" alt="Refugio cercano" />
+              </label>
+            </div>
+            <div className="radio-concreto">
+              <input
+                type="radio"
+                name="type"
+                value="Entrega de ropa"
+                onChange={handleInput}
+              />
+              <label>
+                Entrega de ropa{" "}
+                <img src="./camiseta.png" alt="Entrega de ropa" />
+              </label>
+            </div>
           </div>
-
-          <input
-            name="place"
-            value={insertForm.place}
-            onChange={handleInput}
-            placeholder="Pon aquí la dirección"
-          />
-          <label htmlFor="place">Lugar</label>
-          <input
-            type="date"
-            name="date"
-            value={insertForm.date}
-            onChange={handleInput}
-          />
-          <label htmlFor="date">Fecha</label>
-
-          <input
-            type="time"
-            name="time"
-            value={insertForm.time}
-            onChange={handleInput}
-          />
-          <label htmlFor="time">Hora</label>
+          <div className="placeForm">
+            <div>
+              <input
+                className="inputButton"
+                name="place"
+                value={insertForm.place}
+                onChange={handleInput}
+                placeholder="Pon aquí la dirección"
+              />
+              <label htmlFor="place">Lugar</label>
+            </div>
+            <div>
+              <input
+                className="inputButton"
+                type="date"
+                name="date"
+                value={insertForm.date}
+                onChange={handleInput}
+              />
+              <label htmlFor="date">Fecha</label>
+            </div>
+            <div>
+              <input
+                className="inputButton"
+                type="time"
+                name="time"
+                value={insertForm.time}
+                onChange={handleInput}
+              />
+              <label htmlFor="time"> Hora</label>
+            </div>
+          </div>
 
           <button type="submit">Enviar</button>
           {error && <div style={{ color: "red" }}>{error}</div>}
@@ -109,5 +130,75 @@ const InsertFormAPI = () => {
     )
   );
 };
+//     user && (
+//       <div className="insertForm">
+//         <h1>Introduzca su evento:</h1>
+//         <form onSubmit={submitForm}>
+//           <label>Nombre</label>
+//           <input
+//             name="name"
+//             value={insertForm.name}
+//             onChange={handleInput}
+//             placeholder="Nombre del type"
+//           />
+//           <div className="radio">
+//             <input
+//               className="radio-concreto"
+//               type="radio"
+//               name="type"
+//               value="Entrega de comida"
+//               onChange={handleInput}
+//             />
+//             <label>Entrega de comida 🍜 </label>
+
+//             <input
+//               className="radio-concreto"
+//               type="radio"
+//               name="type"
+//               value="Refugio cercano"
+//               onChange={handleInput}
+//             />
+//             <label>Refugio cercano 🏡 </label>
+
+//             <input
+//               className="radio-concreto"
+//               type="radio"
+//               name="type"
+//               value="Entrega de ropa"
+//               onChange={handleInput}
+//             />
+//             <label>Entrega de ropa 👕 </label>
+//           </div>
+
+//           <input
+//             name="place"
+//             value={insertForm.place}
+//             onChange={handleInput}
+//             placeholder="Pon aquí la dirección"
+//           />
+//           <label htmlFor="place">Lugar</label>
+//           <input
+//             type="date"
+//             name="date"
+//             value={insertForm.date}
+//             onChange={handleInput}
+//           />
+//           <label htmlFor="date">Fecha</label>
+
+//           <input
+//             type="time"
+//             name="time"
+//             value={insertForm.time}
+//             onChange={handleInput}
+//           />
+//           <label htmlFor="time">Hora</label>
+
+//           <button type="submit">Enviar</button>
+//           {error && <div style={{ color: "red" }}>{error}</div>}
+//         </form>
+//       </div>
+//     )
+//   );
+// };
 
 export default InsertFormAPI;
