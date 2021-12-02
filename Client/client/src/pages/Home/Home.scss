@@ -24,18 +24,7 @@
       width: 100%;
     }
     button {
-      border: initial;
-      box-sizing: initial;
-      color: initial;
-      cursor: initial;
-      height: initial;
-      text-align: initial;
-      width: initial;
-      margin: initial;
-      margin-top: initial;
-      margin-bottom: initial;
-      border-radius: initial;
-      font-size: initial;
+      border: none;
       padding: 5px;
       width: 150px;
       height: 40px;
@@ -142,6 +131,12 @@
         position: absolute;
         right: 3vw;
         bottom: 0;
+
+        &:hover {
+          border: 1px solid lightgrey;
+          transform: scale(1.01);
+          transition: 0.5s;
+        }
       }
       .subtitle {
         max-width: calc(55vw - 400px);

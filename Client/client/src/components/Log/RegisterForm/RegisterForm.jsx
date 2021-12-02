@@ -104,7 +104,7 @@ const RegisterForm = () => {
           )}
         </form>
       </div>
-      <h2 className="register-footer">Registro</h2>
+      <h2 className="log-footer">Registro</h2>
     </>
   );
 };

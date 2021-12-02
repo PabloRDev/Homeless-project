@@ -94,7 +94,7 @@ const LoginForm = () => {
           )}
         </form>
       </div>
-      <h2 className="login-footer">Acceso</h2>
+      <h2 className="log-footer">Acceso</h2>
     </>
   );
 };
