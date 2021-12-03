@@ -28,7 +28,7 @@
     color: black;
     background-color: #8bb0d9;
     border-radius: 5px;
-    filter: drop-shadow(0px 4px 7px rgba(0, 0, 0, 0.12));
+    border: none;
   }
   img {
     width: 20px;
@@ -53,10 +53,10 @@
   padding: 10px;
 }
 .inputButton {
+  border: none;
   width: 61%;
   height: 30px;
   margin: 5px;
-  border: 1px solid #000000;
   box-sizing: border-box;
   border-radius: 15px;
 }
